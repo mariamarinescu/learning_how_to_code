@@ -10,19 +10,23 @@ import './LandingCard.component.scss';
 const useStyles = makeStyles(theme => ({
     root: {
         [theme.breakpoints.down('sm')]: {
-            top: 222
+            top: 222,
+            width:'60%',
+            height: 'auto',
         },
         [theme.breakpoints.up('md')]: {
-            top: 222
+            top: 222,
+            width: '50%',
+            height: 'auto',
         },
         [theme.breakpoints.up('lg')]: {
-            top: 222
+            top: 222,
+            width: '44%',
+            height: 'auto',
         },
-        minWidth: 275,
         position: 'relative',
-        width: 200,
-        height: 200,
         margin: '0 auto',
+        zIndex: 10
     },
     bullet: {
         display: 'inline-block',
@@ -30,7 +34,7 @@ const useStyles = makeStyles(theme => ({
         transform: 'scale(0.8)',
     },
     title: {
-        fontSize: 14,
+        // fontSize: 14,
     },
     pos: {
         marginBottom: 12,
@@ -42,10 +46,22 @@ export default function OutlinedCard() {
     const bull = <span className={classes.bullet}>•</span>;
 
     return (
-        <Card className={classes.root} variant="outlined">
+        <Card className={classes.root} variant="outlined" id="card">
             <CardContent>
-                <div class="typewriter">
+                <div id="typewriter">
                     <h1>Hi! I'm Maria.</h1>
+                </div>
+                <div id="typewriter2">
+                    <h1>This is my journey</h1>
+                </div>
+                <div id="typewriter3">
+                    <h1>in programming</h1>
+                </div>
+                <div id="typewriter4">
+                    <h1>and a bit of myself.</h1>
+                </div>
+                <div id="typewriter5">
+                    <h1>I'll guide you through it.</h1>
                 </div>
             </CardContent>
             <CardActions>
