@@ -1,5 +1,7 @@
 import React from 'react';
 import Particles from 'react-particles-js';
+import OutlinedCard from '../landing-card/LandingCard.component';
+import './LandingPage.component.sass';
 
 
 const particleOpt = {
@@ -19,16 +21,22 @@ const particleOpt = {
               mode: "repulse"
           }
       }
-  }
-  
+    },
+	    retina_detect: true
 }
+
+  
+
 function LandingPage() {
   return (
-
+<React.Fragment>
+<OutlinedCard/>
+<div id="particles">
   <Particles 
     params={particleOpt}
-  />
-
+  /></div>
+ 
+</React.Fragment>
 
   );
 }
