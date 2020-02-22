@@ -29,14 +29,13 @@ const particleOpt = {
 
 function LandingPage() {
   return (
-<React.Fragment>
-<OutlinedCard/>
+<div className="landingPage"><OutlinedCard/>
 <div id="particles">
   <Particles 
     params={particleOpt}
   /></div>
+  </div>
  
-</React.Fragment>
 
   );
 }
