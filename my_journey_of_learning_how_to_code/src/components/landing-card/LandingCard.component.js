@@ -10,21 +10,22 @@ import './LandingCard.component.scss';
 const useStyles = makeStyles(theme => ({
     root: {
         [theme.breakpoints.down('sm')]: {
-            top: 222,
+            top: -22,
             width:'60%',
             height: 'auto',
         },
         [theme.breakpoints.up('md')]: {
-            top: 222,
+            top: 22,
             width: '50%',
             height: 'auto',
         },
         [theme.breakpoints.up('lg')]: {
-            top: 222,
+            top: 22,
             width: '44%',
             height: 'auto',
         },
         position: 'relative',
+        display: 'block',
         margin: '0 auto',
         zIndex: 10
     },
@@ -65,7 +66,7 @@ export default function OutlinedCard() {
                 </div>
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small" className="button type3">Begin</Button>
             </CardActions>
         </Card>
     );

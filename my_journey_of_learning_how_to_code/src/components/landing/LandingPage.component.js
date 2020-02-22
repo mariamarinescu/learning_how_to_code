@@ -29,11 +29,12 @@ const particleOpt = {
 
 function LandingPage() {
   return (
-<div className="landingPage"><OutlinedCard/>
+<div className="landingPage">
 <div id="particles">
   <Particles 
     params={particleOpt}
   /></div>
+  <OutlinedCard/>
   </div>
  
 

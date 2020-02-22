@@ -1,189 +1,176 @@
-
 body {
-	background: #333;
-	padding-top: 5em;
-	display: flex;
-	justify-content: center;
-  }
-  
- #card {
+  background: #333;
+  display: flex;
+  justify-content: center;
+}
 
-	box-shadow: 0 3px 14px rgba(191, 191, 191, 1), 0 15px 12px rgba(46, 49, 49, 1);
-		
-		
-		min-height: 200px;
-		width: 50vw;
-		margin: 100px auto;
-		background: white;
-		border-radius: 5px;
-	  
- }
-  #typewriter h1 {
-	  position: relative;
-	color: black;
-	font-family: monospace;
-	overflow: hidden;
-	border-right: .15em solid orange;
-	white-space: nowrap;
-	width: 100%;
-	margin: 0 auto; 
-	letter-spacing: .15em; 
-	animation: 
-	  typing 3.6s steps(30, end),
-	  link-caret .5s step-end infinite;
-  }
-
-  
-  #typewriter2 h1 {
-	color: black;
-	font-family: monospace;
-	overflow: hidden; 
-	border-right: .15em solid orange;
-	white-space: nowrap;
-	width: 100%;
-	margin: 0 auto; 
-	letter-spacing: .15em; 
-	animation: 
-	  typing 4.5s steps(30, end),
-	  link-caret .5s step-end infinite;
-  }
-  
-  #typewriter3 h1 {
-	color: black;
-	font-family: monospace;
-	overflow: hidden; 
-	border-right: .15em solid orange;
-	white-space: nowrap;
-	width: 100%;
-	margin: 0 auto; 
-	letter-spacing: .15em; 
-	animation: 
-	  typing 5.5s steps(30, end),
-	  link-caret .5s step-end infinite;
-  }
-  
-  #typewriter4 h1 {
-	color: black;
-	font-family: monospace;
-	overflow: hidden; 
-	border-right: .15em solid orange;
-	white-space: nowrap;
-	width: 100%;
-	margin: 0 auto; 
-	letter-spacing: .15em; 
-	animation: 
-	  typing 6.5s steps(30, end),
-	  link-caret .5s step-end infinite;
-  }
-  
-  #typewriter5 h1 {
-	color: black;
-	font-family: monospace;
-	overflow: hidden; 
-	border-right: .15em solid orange;
-	white-space: nowrap;
-	width: 100%;
-	height: auto;
-	margin: 0 auto; 
-	display: block;
-	letter-spacing: .15em; 
-	animation: 
-	  typing 7.5s steps(30, end),
-	  link-caret .5s step-end infinite;
-  }
-  
-
-
-  
-
-  @keyframes typing {
-	from { width: 0 }
-	to { width: 100% }
-  }
-  
-
-  @keyframes blink-caret {
-	from, to { border-color: transparent }
-	50% { border-color: orange }
-  }
-
-
-  @media (max-width: 600px) {
+#card {
+  box-shadow: 0 px 14px rgba(191, 191, 191, 1), 0 15px 12px rgba(46, 49, 49, 1);
+	// display: block;
+//   min-height: 200px;
+//   width: 50vw;
+//   margin: 0 auto;
+//   background: white;
+  border-radius: 5px;
+}
 #typewriter h1 {
-	font-size:7vw!important;
-	padding-bottom: 10px;
+  position: relative;
+  color: black;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  width: 100%;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.6s steps(30, end), link-caret 0.5s step-end infinite;
 }
+
 #typewriter2 h1 {
-	font-size:4vw!important;
+  color: black;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  width: 100%;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 4.5s steps(30, end), link-caret 0.5s step-end infinite;
 }
+
 #typewriter3 h1 {
-	font-size:5vw!important;
+  color: black;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  width: 100%;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 5.5s steps(30, end), link-caret 0.5s step-end infinite;
 }
+
 #typewriter4 h1 {
-	font-size:3.8vw!important;
-	padding-bottom: 10px;
+  color: black;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  width: 100%;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 6.5s steps(30, end), link-caret 0.5s step-end infinite;
 }
+
 #typewriter5 h1 {
-	font-size:2.9vw!important;
+  color: black;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  letter-spacing: 0.15em;
+  animation: typing 7.5s steps(30, end), link-caret 0.5s step-end infinite;
 }
-  }
 
-  @media(max-width: 960px) {
-	#typewriter h1 {
-		font-size:3vw!important;
-		padding-bottom: 10px;
-	}
-	#typewriter2 h1 {
-		font-size:4vw!important;
-	}
-	#typewriter3 h1 {
-		font-size:5vw!important;
-	}
-	#typewriter4 h1 {
-		font-size:3.8vw!important;
-		padding-bottom: 10px;
-	}
-	#typewriter5 h1 {
-		font-size:2.9vw!important;
-	}
+@keyframes typing {
+  from {
+    width: 0;
   }
+  to {
+    width: 100%;
+  }
+}
 
-  @media(max-width: 1280px) {
-	#typewriter h1 {
-		font-size:3.3vw!important;
-		padding-bottom: 10px;
-	}
-	#typewriter2 h1 {
-		font-size:2.7vw!important;
-	}
-	#typewriter3 h1 {
-		font-size:3.3vw!important;
-	}
-	#typewriter4 h1 {
-		font-size:2.7vw!important;
-		padding-bottom: 10px;
-	}
-	#typewriter5 h1 {
-		font-size:2.0vw!important;
-	}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
   }
+  50% {
+    border-color: orange;
+  }
+}
 
-  @media(min-width: 1920px) {
-	#typewriter h1 {
-		font-size:5vw!important;
-		padding-bottom: 10px;
-	}
-	#typewriter2 h1 {
-		font-size:4vw!important;
-	}
-	#typewriter3 h1 {
-		font-size:5vw!important;
-	}
-	#typewriter4 h1 {
-		font-size:3.8vw!important;
-		padding-bottom: 10px;
-	}
-	#typewriter5 h1 {
-		font-size:2.6vw!important;
-	}
+@media (max-width: 600px) {
+  #typewriter h1 {
+    font-size: 7vw !important;
+    padding-bottom: 10px;
   }
+  #typewriter2 h1 {
+    font-size: 4vw !important;
+  }
+  #typewriter3 h1 {
+    font-size: 5vw !important;
+  }
+  #typewriter4 h1 {
+    font-size: 3.8vw !important;
+    padding-bottom: 10px;
+  }
+  #typewriter5 h1 {
+    font-size: 2.9vw !important;
+  }
+}
+
+@media (max-width: 960px) {
+  #typewriter h1 {
+    font-size: 3vw !important;
+    padding-bottom: 10px;
+  }
+  #typewriter2 h1 {
+    font-size: 4vw !important;
+  }
+  #typewriter3 h1 {
+    font-size: 5vw !important;
+  }
+  #typewriter4 h1 {
+    font-size: 3.8vw !important;
+    padding-bottom: 10px;
+  }
+  #typewriter5 h1 {
+    font-size: 2.9vw !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  #typewriter h1 {
+    font-size: 3.3vw !important;
+    padding-bottom: 10px;
+  }
+  #typewriter2 h1 {
+    font-size: 2.7vw !important;
+  }
+  #typewriter3 h1 {
+    font-size: 3.3vw !important;
+  }
+  #typewriter4 h1 {
+    font-size: 2.7vw !important;
+    padding-bottom: 10px;
+  }
+  #typewriter5 h1 {
+    font-size: 2vw !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  #typewriter h1 {
+    font-size: 5vw !important;
+    padding-bottom: 10px;
+  }
+  #typewriter2 h1 {
+    font-size: 4vw !important;
+  }
+  #typewriter3 h1 {
+    font-size: 5vw !important;
+  }
+  #typewriter4 h1 {
+    font-size: 3.8vw !important;
+    padding-bottom: 10px;
+  }
+  #typewriter5 h1 {
+    font-size: 2.6vw !important;
+  }
+}
