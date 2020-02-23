@@ -7,14 +7,26 @@ div#programmer-me {
 div#card2 {
     position: relative;
     top: -100px;
-    margin: 0;
+    display: block;
+    margin: 0 auto;
     padding: 0;
     font-family: 'Josefin Sans', sans-serif;
 
     
 }
+.MuiButton-textSizeSmall {
+    margin: 0 auto;
+    position: relative;
+}
+main.makeStyles-content-10 {
+    padding: 0!important;
+    flex-grow: 0;
+}
 div.content {
     font-family: 'Josefin Sans', sans-serif!important;
+    font-size: 100%;
+    margin: 0 auto;
+    padding: 0;
 
 }
 body {
@@ -22,50 +34,46 @@ body {
 
 }
 
-.stepper {
-    position: absolute!important;
-  
-    left: 10%!important;
-    top: 300px!important;
+#stepper {
+    position: relative!important;
  }
 @media only screen and (max-width: 600px) {
-  div#prog {
-        position: absolute; }
-    /* Stepper#stepper {
-       position: absolute!important;
-       left: -20px;
-       width: 60vw!important;
-
-    } */
-    .stepper {
-        left: 10%;
+    #stepper {
+        display: inline-block;
     }
+    div.content {
+        width: 90%;
+        left: -120px!important;
+    }
+    .makeStyles-button-149 {
+        margin: 22px!important;
+    }
+ 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .stepper {
-        left: 10%;
+    div.content {
+        width: 90%;
+        left: -120px!important;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .stepper {
-        left: 10%;
-    }
+   
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .stepper {
-        left: 10%;
-    }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .stepper {
-        left: 10%;
+    #stepper {
+margin: 0 auto;    }
+    div.content {
+      margin: 0 auto!important;
     }
 }

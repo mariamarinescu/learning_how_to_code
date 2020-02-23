@@ -67,7 +67,7 @@ export default function OutlinedCard() {
                 </div>
             </CardContent>
             <CardActions>
-               <Link to="/about"> <Button size="small" className="button type3" >Begin</Button></Link>
+                <Button size="small" id="type3" ><Link className="effect1"to="/about">Begin<span className="bg"></span></Link></Button>
             </CardActions>
         </Card>
     );
