@@ -5,7 +5,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import './LandingCard.component.scss';
+import {Link} from 'react-router-dom';
+import './LandingCard.component.css';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -66,7 +67,7 @@ export default function OutlinedCard() {
                 </div>
             </CardContent>
             <CardActions>
-                <Button size="small" className="button type3">Begin</Button>
+               <Link to="/about"> <Button size="small" className="button type3" >Begin</Button></Link>
             </CardActions>
         </Card>
     );
