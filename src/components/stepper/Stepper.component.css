@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+.MuiStepIcon-root.MuiStepIcon-active,
+.MuiStepIcon-root.MuiStepIcon-completed
+  {
+  color: #2c9c91!important;
+}
+.makeStyles-button-153,
+.MuiButton-contained {
+  background-color: #2c9c91!important;
+}
+div#programmer-me {
+  position: relative;
+  top: -100px;
+}
+div#card2 {
+  position: relative;
+  top: -100px;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+.MuiButton-textSizeSmall {
+  margin: 0 auto;
+  position: relative;
+}
+main.makeStyles-content-10 {
+  padding: 0 !important;
+  flex-grow: 0;
+}
+div.content {
+  font-family: "Josefin Sans", sans-serif !important;
+  font-size: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+body {
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+#stepper {
+  position: relative !important;
+}
+
+@media (max-width: 250px) {
+  img#clickmobile {
+    left: 3%;
+    top: 10px!important;
+  }
+  img#clickdesktop {
+
+  }
+}
+
+@media (min-width: 251px) {
+  img#clickmobile {
+    left: 20%;
+    top: 155px!important;
+  }
+  img#clickdesktop {
+
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  img#clickmobile {
+    left: 23%;
+    top: -166px!important;
+  }}
+@media only screen and (max-width: 600px) {
+  img#clickmobile {
+    left: 20%;
+    top: -166px!important;
+  }
+  #stepper {
+    display: inline-block;
+  }
+  div.content {
+    width: 90%;
+    left: -120px !important;
+  }
+  .makeStyles-button-149 {
+    margin: 22px !important;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  div.content {
+    width: 90%;
+    left: -120px !important;
+  }
+  img#clickmobile {
+    left: 38%;
+    top: 99px!important;
+    /* width: 80% */
+}}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* #stepper {
+    margin: 0 auto;
+  } */
+  div.content {
+    margin: 0 auto !important;
+  }
+}

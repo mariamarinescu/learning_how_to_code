@@ -15,6 +15,8 @@ import VerticalLinearStepper from '../second-stepper/SecondStepper.component'
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
+      flexGrow: '0!important'
+  
   },
   button: {
     marginTop: theme.spacing(1),
@@ -35,8 +37,8 @@ function resCredis() {
     return <div className="content">
         <h3>Web Programming I - Client Side Technologies</h3>
         <h3>HTML, CSS and JS fundamentals</h3>
-        <h3><a href="https://www.academiacredis.ro" target="_blank">Credis Academy</a></h3>
-        <h5 >Instructor: <a href="https://www.linkedin.com/in/theodor-tanase/" target="_blank">Theodor Tanase</a></h5>
+        <h3><a href="https://www.academiacredis.ro" target="_blank" rel="noopener norefferer">Credis Academy</a></h3>
+        <h5 >Instructor: <a href="https://www.linkedin.com/in/theodor-tanase/" target="_blank" rel="noopener norefferer">Theodor Tanase</a></h5>
         <p>During the 'Web Programming I' course, administrated by an underside instructor, I learnt about:</p>
         <ul className="check">
             <li> HTML Basics</li>
@@ -47,7 +49,7 @@ function resCredis() {
             <li> Asynchronous programming in JavaScript</li>
             <li> Interacting with HTTP server</li>
         </ul>
-        <a href="https://www.academiacredis.ro/curs-programare-web1"  target="_blank" style={{fontSize: '144%'}}>Course - click me</a>
+        <a href="https://www.academiacredis.ro/curs-programare-web1"  target="_blank" rel="noopener norefferer" style={{fontSize: '144%'}}>Course - click me</a>
     </div>
   };
   function resSelfStudy() {
@@ -55,8 +57,8 @@ function resCredis() {
         <ul className="check">
             <li>
                 I started to study between 7h - 12h/day on platforms as:
-            <a href="https://pluralsight.com" target="_blank"> PluralSight.com</a>,
-            <a href="safaribooksonline.com"  target="_blank"> Safari Books Online</a>
+            <a href="https://pluralsight.com" target="_blank" rel="noopener norefferer"> PluralSight.com</a>,
+            <a href="safaribooksonline.com"  target="_blank" rel="noopener norefferer"> Safari Books Online</a>
             </li>
             <hr />
   
@@ -70,8 +72,8 @@ function resCredis() {
             </li>
             <hr />
             <li> After about 6 months of hard work I managed to have this: <br />
-                <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank">- Make-up Artist Portfolio Website - click me</a> <br />
-                <a href="https://github.com/mariamarinescu/make-up_artist_portfolio" target="_blank">- GitHub Repo - click me</a>
+                <a href="https://alexandraciausu-a6df7.firebaseapp.com/"target="_blank" rel="noopener norefferer">- Make-up Artist Portfolio Website - click me</a> <br />
+                <a href="https://github.com/mariamarinescu/make-up_artist_portfolio" target="_blank" rel="noopener norefferer">- GitHub Repo - click me</a>
             </li>
         </ul>
         <p></p>
@@ -83,14 +85,14 @@ function resCredis() {
         <p>Contest checkmarks:</p>
         <ul className="check">
             <li> SkillValue Quiz</li>
-            <li> Earn all required badges for: <a href="https://www.codecademy.com/users/MariaMarinescu/achievements" target="_blank">Code Academy</a> and <a href="https://www.sololearn.com/Profile/4152053" target="_blank">SoloLearn</a></li>
-            <li> Fully responsive final project based on requirements: <a href="https://codepen.io/rria/pen/MWgqQzx" target="_blank">Project Link - click me</a></li>
+            <li> Earn all required badges for: <a href="https://www.codecademy.com/users/MariaMarinescu/achievements" target="_blank" rel="noopener norefferer">Code Academy</a> and <a href="https://www.sololearn.com/Profile/4152053" target="_blank">SoloLearn</a></li>
+            <li> Fully responsive final project based on requirements: <a href="https://codepen.io/rria/pen/MWgqQzx"target="_blank" rel="noopener norefferer">Project Link - click me</a></li>
         </ul>
         <h4> <a href="https://www.facebook.com/wildcodeschoolromania/posts/500527294080499:0">Winner announcement - click me</a></h4>
         <h4>Prize details:</h4>
         <ul>
-            <li>School: <a href="https://www.wildcodeschool.com/" target="_blank">Wild Code School - click me</a></li>
-            <li>Program : <a href="https://www.wildcodeschool.com/en-GB/trainings/web-developer-full-time?campus=bucharest" target="_blank">JS Fullstack Developer Bootcamp - click me</a></li>
+            <li>School: <a href="https://www.wildcodeschool.com/" target="_blank" rel="noopener norefferer">Wild Code School - click me</a></li>
+            <li>Program : <a href="https://www.wildcodeschool.com/en-GB/trainings/web-developer-full-time?campus=bucharest" target="_blank" rel="noopener norefferer">JS Fullstack Developer Bootcamp - click me</a></li>
             <li>Duration: 700h / 5 months</li>
             <li>Starting Date: 29.07.2019</li>
             <li>Ending Date: 21.02.2020</li>
@@ -101,12 +103,12 @@ function resCredis() {
   };
   function resWCS() {
     return <div className="content">
-        <h3><a href="https://www.wildcodeschool.com/en-GB" target="_blank">Wild Code School Romania</a> - Fullstack Javascript Developer Course</h3>
-        <h5 >Instructor: <a href="https://www.linkedin.com/in/cosmin-andrei-con%C8%9Bu-05144a103/" target="_blank">Cosmin Contu</a></h5>
+        <h3><a href="https://www.wildcodeschool.com/en-GB" target="_blank" rel="noopener norefferer">Wild Code School Romania</a> - Fullstack Javascript Developer Course</h3>
+        <h5 >Instructor: <a href="https://www.linkedin.com/in/cosmin-andrei-con%C8%9Bu-05144a103/" target="_blank" rel="noopener norefferer">Cosmin Contu</a></h5>
   
         <ul>
-            <li>Program : <a href="https://www.wildcodeschool.com/en-GB/trainings/web-developer-full-time?campus=bucharest" target="_blank"> JS Fullstack Developer Bootcamp</a></li>
-            <li>Course syllabus: <a href="https://www.wildcodeschool.com/en-GB/trainings/web-developer-full-time?campus=bucharest&fbclid=IwAR1KjYFSgZ19fB-vj1wsNuiu_FKE17ytp3_7ZuEaYj3gYsG6Ku89mmW0Eok" target="_blank">Click Me</a></li>
+            <li>Program : <a href="https://www.wildcodeschool.com/en-GB/trainings/web-developer-full-time?campus=bucharest" target="_blank" rel="noopener norefferer"> JS Fullstack Developer Bootcamp</a></li>
+            <li>Course syllabus: <a href="https://www.wildcodeschool.com/en-GB/trainings/web-developer-full-time?campus=bucharest&fbclid=IwAR1KjYFSgZ19fB-vj1wsNuiu_FKE17ytp3_7ZuEaYj3gYsG6Ku89mmW0Eok" target="_blank" rel="noopener norefferer">Click Me</a></li>
             <li>3 team projects:</li>
         </ul>
         <VerticalLinearStepper />

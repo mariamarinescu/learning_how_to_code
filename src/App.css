@@ -1,0 +1,24 @@
+.App {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
+main {
+  flex-grow: 0!important;
+}
+a {
+  /* color: #207068; */
+  color: #A8A8A8;
+}
+a:hover {
+  color: #2c9c91;
+  font-weight: none;
+  text-decoration: none;
+}
+.icon {
+  color: white!important;
+}

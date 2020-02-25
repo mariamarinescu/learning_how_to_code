@@ -1,5 +1,6 @@
 
 import React from 'react';
+
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
@@ -13,21 +14,23 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import LastPageIcon from '@material-ui/icons/LastPage';
 import TitleIcon from '@material-ui/icons/Title';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import LanguageIcon from '@material-ui/icons/Language';
-import clsx from 'clsx';
-import HorizontalNonLinearStepper from '../stepper/Stepper.component';
 import teal from '@material-ui/core/colors/teal';
-import { Switch, Route, withRouter, Link } from 'react-router-dom';
+
+
+import clsx from 'clsx';
+
+import HorizontalNonLinearStepper from '../stepper/Stepper.component';
+import { withRouter, Link } from 'react-router-dom';
 
 
 
 
-const drawerWidth = 340;
+const drawerWidth = 280;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,8 +45,9 @@ const useStyles = makeStyles(theme => ({
       duration: theme.transitions.duration.leavingScreen,
 
     }),
-    backgroundColor: "rgb(1,2,32)",
-    color: 'white'
+    backgroundColor: "#484848",
+    color: '#A8A8A8',
+    cursor: 'pointer'
 
   },
   appBarShift: {
@@ -55,7 +59,7 @@ const useStyles = makeStyles(theme => ({
     }),
   },
   menuButton: {
-    marginRight: 36,
+    marginRight: 26,
    
   },
   hide: {
@@ -65,8 +69,8 @@ const useStyles = makeStyles(theme => ({
     width: drawerWidth,
     flexShrink: 0,
     whiteSpace: 'nowrap',
-    backgroundColor:"rgb(13,73,101)",
-    color: 'rgb(1,2,32)'
+    backgroundColor:"rgb(51,51,51)",
+    color: '#A8A8A8'
    
 
   },
@@ -76,8 +80,8 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
-    backgroundColor: "rgb(13,73,101)",
-    color: 'white'
+    backgroundColor: "rgb(51,51,51)",
+    color: '#A8A8A8!important'
   },
   drawerClose: {
     transition: theme.transitions.create('width', {
@@ -89,8 +93,8 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       width: theme.spacing(9) + 1,
     },
-    backgroundColor: "rgb(13,73,101)",
-    color: 'white'
+    backgroundColor: "rgb(51,51,51)",
+    color: '#A8A8A8'
   },
   toolbar: {
     display: 'flex',
@@ -102,9 +106,13 @@ const useStyles = makeStyles(theme => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-
-
   },
+  completed: {
+    display: 'inline-block',
+  },
+  icon: {
+    color: '#A8A8A8'
+  }
 
 }));
 
@@ -128,6 +136,7 @@ const ResponsiveDrawer = (props) => {
   };
 
   const color = teal[700];
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -150,11 +159,8 @@ const ResponsiveDrawer = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          {/* <IconButton onClick={handleDrawerOpen}>
-            {theme.direction !== 'rtl' ? <ChevronRightIcon /> : <div></div>}
-          </IconButton> */}
           <Typography variant="h6" noWrap>
-            Maria F. Marinescu - My Journey
+           <a href="https://www.linkedin.com/in/maria-marinescu/" target="_blank" rel="noopener norefferer"> Maria Marinescu </a>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -181,22 +187,22 @@ const ResponsiveDrawer = (props) => {
 
         <List>
           <ListItem>
-            <ListItemIcon> <TitleIcon /> </ListItemIcon>
+            <ListItemIcon> <div className={classes.icon}><TitleIcon clasName="icon" /></div> </ListItemIcon>
             <ListItemText primary={"Quick links"} />
           </ListItem>
 
           <Divider />
 
           <ListItem button>
-            <ListItemIcon> <LanguageIcon /> </ListItemIcon>
-            <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank"> <ListItemText primary={"Make-up Artist Portfolio"} /></a>
+            <ListItemIcon><div className={classes.icon}> <LanguageIcon clasName="icon" /></div> </ListItemIcon>
+            <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer"> <ListItemText primary={"Make-up Artist Portfolio"} /></a>
           </ListItem>
 
           <Divider />
 
           <ListItem button >
-            <ListItemIcon> <LanguageIcon /> </ListItemIcon>
-            <a href="https://wildcodeschool.github.io/bucharest-project3-interactive-platform/#/" target="_blank" rel="noopener norefferer"><ListItemText primary={"Techir - 3rd team project (client)"} /></a>
+            <ListItemIcon> <div className={classes.icon}><LanguageIcon /></div> </ListItemIcon>
+            <a href="https://wildcodeschool.github.io/bucharest-project3-interactive-platform/#/" target="_blank" rel="noopener norefferer"><ListItemText primary={"Techir Interactive"} /></a>
           </ListItem>
 
           <Divider />
@@ -204,14 +210,14 @@ const ResponsiveDrawer = (props) => {
 
 
           <ListItem button >
-            <ListItemIcon> <LanguageIcon /> </ListItemIcon>
+            <ListItemIcon> <div className={classes.icon}><LanguageIcon /></div> </ListItemIcon>
             <a href="http://rriamarria.github.io/real_time_iss_tracker" target="_blank" rel="noopener norefferer"> <ListItemText primary={"ISS tracker"} /></a>
           </ListItem>
 
           <Divider />
 
           <ListItem button >
-            <ListItemIcon> <LanguageIcon /> </ListItemIcon>
+            <ListItemIcon> <div className={classes.icon}><LanguageIcon /></div> </ListItemIcon>
             <a href="https://rriamarria.github.io/walking_in_bucharest/" target="_blank" rel="noopener norefferer"> <ListItemText primary={"Walking tour of Bucharest"} /></a>
           </ListItem>
 
@@ -220,35 +226,24 @@ const ResponsiveDrawer = (props) => {
      
           
           <ListItem button >
-            <ListItemIcon> <GitHubIcon /> </ListItemIcon>
-           <a href="https://github.com/mariamarinescu/portfolio/tree/feature/frontend"> <ListItemText primary={"This website's GitHub Repo"} /></a>
+            <ListItemIcon> <div className={classes.icon}><GitHubIcon /></div> </ListItemIcon>
+           <a href="https://github.com/mariamarinescu/portfolio/tree/feature/frontend" target="_blank" rel="noopener norefferer"> <ListItemText primary={".this Repository"} /></a>
           </ListItem>
 
           <Divider />
           <Divider/>
           <ListItem button >
-            <ListItemIcon> <GitHubIcon /> </ListItemIcon>
+            <ListItemIcon> <div className={classes.icon}><GitHubIcon /></div> </ListItemIcon>
             <a href="https://github.com/mariamarinescu" target="_blank" rel="noopener norefferer">   <ListItemText primary={"Old GitHub acc."} /> </a>
           </ListItem>
           
         <Divider/>
           <Divider/>
           <ListItem button >
-            <ListItemIcon> <GitHubIcon /> </ListItemIcon>
+            <ListItemIcon><div className={classes.icon}> <GitHubIcon /></div> </ListItemIcon>
             <a href="https://github.com/rriamarria" target="_blank" rel="noopener norefferer">   <ListItemText primary={"New GitHub acc."} /> </a>
           </ListItem>
-          
         <Divider/>
-        
-          {/* <ListItem button>
-            <ListItemIcon> <Link to="/before"><LastPageIcon /> </Link> </ListItemIcon>
-            <a href="/before" rel="noopener norefferer">
-              <ListItemText primary={"About me - before programming"} />
-            </a>
-          </ListItem> */}
-       
-
-          {/* <Divider /> */}
         </List>
       </Drawer>
       <main className={classes.content}>
