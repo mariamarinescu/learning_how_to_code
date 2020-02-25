@@ -131,8 +131,6 @@ const ResponsiveDrawer = (props) => {
 
   const handleDrawerClose = () => {
     setOpen(false);
-    console.log(props.before)
-
   };
 
   const color = teal[700];
@@ -227,14 +225,14 @@ const ResponsiveDrawer = (props) => {
           
           <ListItem button >
             <ListItemIcon> <div className={classes.icon}><GitHubIcon /></div> </ListItemIcon>
-           <a href="https://github.com/mariamarinescu/portfolio/tree/feature/frontend" target="_blank" rel="noopener norefferer"> <ListItemText primary={".this Repository"} /></a>
+           <a href="https://github.com/mariamarinescu/learning_how_to_code" target="_blank" rel="noopener norefferer"> <ListItemText primary={"this.Repository"} /></a>
           </ListItem>
 
           <Divider />
           <Divider/>
           <ListItem button >
             <ListItemIcon> <div className={classes.icon}><GitHubIcon /></div> </ListItemIcon>
-            <a href="https://github.com/mariamarinescu" target="_blank" rel="noopener norefferer">   <ListItemText primary={"Old GitHub acc."} /> </a>
+            <a href="https://github.com/mariamarinescu?tab=overview&from=2019-12-01&to=2019-12-31" target="_blank" rel="noopener norefferer">   <ListItemText primary={"Old GitHub acc."} /> </a>
           </ListItem>
           
         <Divider/>

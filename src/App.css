@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
 .App {
   position: relative;
   width: 100vw;
@@ -22,4 +24,9 @@ a:hover {
 }
 .icon {
   color: white!important;
+}
+div.MuiStepper-vertical, 
+.makeStyles-root-338, span, a, li, p {
+  font-family: "Josefin Sans", sans-serif!important;
+
 }
