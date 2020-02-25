@@ -1,7 +1,7 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import OutlinedCard from '../landing-card/LandingCard.component';
-import './LandingPage.component.sass';
+import './LandingPage.component.css';
 
 
 const particleOpt = {
@@ -29,7 +29,7 @@ const particleOpt = {
 
 function LandingPage() {
   return (
-<div className="landingPage">
+<div className="landingPage" id="landing">
 <div id="particles">
   <Particles 
     params={particleOpt}

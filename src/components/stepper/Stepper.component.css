@@ -27,12 +27,14 @@ div#card2 {
 main.makeStyles-content-10 {
   padding: 0 !important;
   flex-grow: 0;
+
 }
 div.content {
   font-family: "Josefin Sans", sans-serif !important;
   font-size: 100%;
   margin: 0 auto;
   padding: 0;
+
 }
 body {
   font-family: "Josefin Sans", sans-serif !important;
@@ -42,14 +44,16 @@ body {
   position: relative !important;
 }
 
+.check {
+  position: relative;
+  left: -20px; }
+
 @media (max-width: 250px) {
   img#clickmobile {
     left: 3%;
     top: 10px!important;
   }
-  img#clickdesktop {
-
-  }
+  
 }
 
 @media (min-width: 251px) {
@@ -57,9 +61,7 @@ body {
     left: 20%;
     top: 155px!important;
   }
-  img#clickdesktop {
-
-  }
+ 
 }
 
 @media only screen and (max-width: 510px) {
@@ -77,7 +79,7 @@ body {
   }
   div.content {
     width: 90%;
-    left: -120px !important;
+    left: -110px !important;
   }
   .makeStyles-button-149 {
     margin: 22px !important;
@@ -85,11 +87,10 @@ body {
 
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   div.content {
     width: 90%;
-    left: -120px !important;
+    left: -150px !important;
   }
   img#clickmobile {
     left: 38%;
@@ -97,15 +98,12 @@ body {
     /* width: 80% */
 }}
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   /* #stepper {
     margin: 0 auto;

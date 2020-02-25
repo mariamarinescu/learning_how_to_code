@@ -16,4 +16,8 @@
   margin: 0;
   top: 0;
 }
+#landing {
+      background: #dd9d9d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); }
 /*# sourceMappingURL=LandingPage.component.css.map */

@@ -13,7 +13,7 @@ import { Grid } from '@material-ui/core';
 import './Stepper.component.css';
 import * as imgMobile from '../../assets/click.png';
 import * as imgDesktop from '../../assets/rsz_mouse.png';
-
+const WCSprefix = "https://www.wildcodeschool.com/en-GB";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,8 +23,11 @@ const useStyles = makeStyles(theme => ({
     height: 'auto',
     width: 'auto',
     top: '100px',
-    position: 'relative',
-    margin: '0 auto'
+    position: 'relative'
+  },
+  buttons: {
+    left: '5%',
+    position: 'relative'
   },
 
   clickMobile: {
@@ -69,17 +72,17 @@ const useStyles = makeStyles(theme => ({
 
   },
   stepper1: {
-    margin: '0 auto'
+    // margin: '0 auto'
   },
   button: {
     marginRight: theme.spacing(3),
-    margin: '0 auto'
+    margin: 6
   },
   completed: {
-    margin: '0 auto'
+    // margin: '0 auto'
   },
   instructions: {
-    margin: '0 auto'
+    // margin: '0 auto'
   },
 }));
 
@@ -91,8 +94,8 @@ function resCredis() {
   return <div className="content">
     <h3>Web Programming I - Client Side Technologies</h3>
     <h3>HTML, CSS and JS fundamentals</h3>
-    <h3><a href="https://www.academiacredis.ro" target="_blank">Credis Academy</a></h3>
-    <h5 >Instructor: <a href="https://www.linkedin.com/in/theodor-tanase/" target="_blank">Theodor Tanase</a></h5>
+    <h3><a href="https://www.academiacredis.ro" target="_blank" rel="noopener norefferer">Credis Academy</a></h3>
+    <h5 >Instructor: <a href="https://www.linkedin.com/in/theodor-tanase/" target="_blank" rel="noopener norefferer">Theodor Tanase</a></h5>
     <p>During the 'Web Programming I' course, administrated by an underside instructor, I learnt about:</p>
     <ul className="check">
       <li> HTML Basics</li>
@@ -103,7 +106,7 @@ function resCredis() {
       <li> Asynchronous programming in JavaScript</li>
       <li> Interacting with HTTP server</li>
     </ul>
-    <a href="https://www.academiacredis.ro/curs-programare-web1" target="_blank" style={{ fontSize: '144%' }}>Course - click me</a>
+    <a href="https://www.academiacredis.ro/curs-programare-web1" target="_blank" rel="noopener norefferer" style={{ fontSize: '144%' }}>Course - click me</a>
   </div>
 };
 function resSelfStudy() {
@@ -111,8 +114,8 @@ function resSelfStudy() {
     <ul className="check">
       <li>
         I started to study between 7h - 12h/day on platforms as:
-          <a href="https://pluralsight.com" target="_blank"> PluralSight.com</a>,
-          <a href="safaribooksonline.com" target="_blank"> Safari Books Online</a>
+          <a href="https://pluralsight.com" target="_blank" rel="noopener norefferer"> PluralSight.com</a>,
+          <a href="https://safaribooksonline.com" target="_blank" rel="noopener norefferer"> Safari Books Online</a>
       </li>
       <hr />
 
@@ -126,8 +129,8 @@ function resSelfStudy() {
       </li>
       <hr />
       <li> After about 6 months of hard work I managed to have this: <br />
-        <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank">- Make-up Artist Portfolio Website - click me</a> <br />
-        <a href="https://github.com/mariamarinescu/make-up_artist_portfolio" target="_blank">- GitHub Repo - click me</a>
+        <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer">- Make-up Artist Portfolio Website - click me</a> <br />
+        <a href="https://github.com/mariamarinescu/make-up_artist_portfolio" target="_blank" rel="noopener norefferer">- GitHub Repo - click me</a>
       </li>
     </ul>
     <p></p>
@@ -139,36 +142,32 @@ function resWCSContest() {
     <p>Contest checkmarks:</p>
     <ul className="check">
       <li> SkillValue Quiz</li>
-      <li> Earn all required badges for: <a href="https://www.codecademy.com/users/MariaMarinescu/achievements" target="_blank">Code Academy</a> and <a href="https://www.sololearn.com/Profile/4152053" target="_blank">SoloLearn</a></li>
-      <li> Fully responsive final project based on requirements: <a href="https://codepen.io/rria/pen/MWgqQzx" target="_blank">Project Link - click me</a></li>
+      <li> Earn all required badges for: <a href="https://www.codecademy.com/users/MariaMarinescu/achievements" target="_blank" rel="noopener norefferer">Code Academy</a> and <a href="https://www.sololearn.com/Profile/4152053" target="_blank">SoloLearn</a></li>
+      <li> Fully responsive final project based on requirements: <a href="https://codepen.io/rria/pen/MWgqQzx" target="_blank" rel="noopener norefferer">Project Link - click me</a></li>
     </ul>
     <h4> <a href="https://www.facebook.com/wildcodeschoolromania/posts/500527294080499:0">Winner announcement - click me</a></h4>
     <h4>Prize details:</h4>
     <ul>
-      <li>School: <a href="https://www.wildcodeschool.com/" target="_blank">Wild Code School - click me</a></li>
-      <li>Program : <a href="https://www.wildcodeschool.com/en-GB/trainings/web-developer-full-time?campus=bucharest" target="_blank">JS Fullstack Developer Bootcamp - click me</a></li>
-      <li>Duration: 700h / 5 months</li>
+      <li>School: <a href={WCSprefix} target="_blank" rel="noopener norefferer">Wild Code School - click me</a></li>
+      <li>Program : <a href={`${WCSprefix}/trainings/web-developer-full-time?campus=bucharest`} target="_blank" rel="noopener norefferer">JS Fullstack Developer Bootcamp - click me</a></li>
+      <li>Duration: 752h / 5 months</li>
       <li>Starting Date: 29.07.2019</li>
       <li>Ending Date: 21.02.2020</li>
     </ul>
-
-    {/* <img src="https://skillvalue.com/static/media/ImageHackathon/SKILLVALUE_20190902_GetWildJS_500x700px_EN_01.jpg" width="300px" height="500px"/> */}
   </div>
 };
 function resWCS() {
   return <div className="content">
-    <h3><a href="https://www.wildcodeschool.com/en-GB" target="_blank">Wild Code School Romania</a> - Fullstack Javascript Developer Course</h3>
-    <h5 >Instructor: <a href="https://www.linkedin.com/in/cosmin-andrei-con%C8%9Bu-05144a103/" target="_blank">Cosmin Contu</a></h5>
+    <h3><a href={`${WCSprefix}/trainings/web-developer-full-time?campus=bucharest`} target="_blank" rel="noopener norefferer">Wild Code School Romania</a> - Fullstack Javascript Developer Course</h3>
+    <h5 >Instructor: <a href="https://www.linkedin.com/in/cosmin-andrei-con%C8%9Bu-05144a103/" target="_blank" rel="noopener norefferer">Cosmin Contu</a></h5>
 
     <ul>
-      <li>Program : <a href="https://www.wildcodeschool.com/en-GB/trainings/web-developer-full-time?campus=bucharest" target="_blank"> JS Fullstack Developer Bootcamp</a></li>
-      <li>Course syllabus: <a href="https://www.wildcodeschool.com/en-GB/trainings/web-developer-full-time?campus=bucharest&fbclid=IwAR1KjYFSgZ19fB-vj1wsNuiu_FKE17ytp3_7ZuEaYj3gYsG6Ku89mmW0Eok" target="_blank">Click Me</a></li>
+      <li>Program : <a href={`${WCSprefix}/trainings/web-developer-full-time?campus=bucharest`} target="_blank" rel="noopener norefferer"> JS Fullstack Developer Bootcamp</a></li>
+      <li>Course syllabus: <a href={`${WCSprefix}/trainings/web-developer-full-time?campus=bucharest&fbclid=IwAR1KjYFSgZ19fB-vj1wsNuiu_FKE17ytp3_7ZuEaYj3gYsG6Ku89mmW0Eok`}
+        target="_blank" rel="noopener norefferer">Click Me</a></li>
       <li>3 team projects:</li>
     </ul>
     <VerticalLinearStepper />
-
-
-    {/* <img src="https://skillvalue.com/static/media/ImageHackathon/SKILLVALUE_20190902_GetWildJS_500x700px_EN_01.jpg" width="300px" height="500px"/> */}
   </div>
 };
 function resPendingJob() {
@@ -178,11 +177,10 @@ function resPendingJob() {
       <li> fast learner</li>
       <li> delivery of value oriented</li>
       <li> passionate about disruptive tech</li>
-      <li> committed to deliver value to customers</li>
       <li> eager to be part of a team that builds tomorrow's technology</li>
       <li> driven to continue to evolve towards reaching my full potential</li>
     </ul>
-    <h4>And also that I am not:</h4>
+    <h4>And also that I am <strong>not</strong>:</h4>
 
     <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> clinging on the technologies I used so far, especially on the backend side </p>
     <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> looking for a dull job to work at </p>
@@ -261,21 +259,10 @@ function HorizontalNonLinearStepper(move) {
     setActiveStep(step);
   };
 
-  const handleComplete = () => {
-    const newCompleted = new Set(completed);
-    newCompleted.add(activeStep);
-    setCompleted(newCompleted);
 
-    if (completed.size !== totalSteps() - skippedSteps()) {
-      handleNext();
-    }
-  };
 
-  const handleReset = () => {
-    setActiveStep(0);
-    setCompleted(new Set());
-    setSkipped(new Set());
-  };
+
+
 
   const isStepSkipped = step => {
     return skipped.has(step);
@@ -324,15 +311,17 @@ function HorizontalNonLinearStepper(move) {
           <div>
             <Typography className={classes.instructions}></Typography>
             <div>{getStepContent(activeStep)}</div>
-            <div>
+            <div className={classes.buttons}>
               <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
                 Back
               </Button>
               <Button
+                disabled={activeStep === 4}
                 variant="contained"
                 color="primary"
                 onClick={handleNext}
                 className={classes.button}
+
               >
                 Next
               </Button>
