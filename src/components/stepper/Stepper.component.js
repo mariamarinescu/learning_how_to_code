@@ -130,7 +130,7 @@ function resSelfStudy() {
       <hr />
       <li> After about 6 months of hard work I managed to have this: <br />
         <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer">- Make-up Artist Portfolio Website - click me</a> <br />
-        <a href="https://github.com/mariamarinescu/make-up_artist_portfolio" target="_blank" rel="noopener norefferer">- GitHub Repo - click me</a>
+        <a href="https://github.com/mariamarinescu/MUA_portfolio" target="_blank" rel="noopener norefferer">- GitHub Repo - click me</a>
       </li>
     </ul>
     <p></p>
@@ -249,6 +249,8 @@ function HorizontalNonLinearStepper(move) {
         : activeStep + 1;
 
     setActiveStep(newActiveStep);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0
   };
 
   const handleBack = () => {
@@ -294,10 +296,10 @@ function HorizontalNonLinearStepper(move) {
                 completed: classes.completed,
                 active: classes.active
               }} >
-                <StepLabel>
+                <StepLabel onClick={handleStep(index)}
+                    completed={isStepComplete(index)}>
                   <StepButton
-                    onClick={handleStep(index)}
-                    completed={isStepComplete(index)}
+                    
                     {...buttonProps}
                   >
 
