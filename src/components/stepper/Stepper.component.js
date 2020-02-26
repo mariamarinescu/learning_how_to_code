@@ -250,7 +250,7 @@ function HorizontalNonLinearStepper(move) {
 
     setActiveStep(newActiveStep);
     document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0
+    document.documentElement.scrollTop = 0;
   };
 
   const handleBack = () => {
