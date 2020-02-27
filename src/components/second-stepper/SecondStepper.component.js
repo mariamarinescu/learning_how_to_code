@@ -30,16 +30,16 @@ function getSteps() {
 function setContent(props) {
     if (props === 0) {
         return <div>
-            <a href="https://rriamarria.github.io/walking_in_bucharest/" target="_blank">View Website</a><br/>
-            <a href="https://rriamarria.github.io/walking_in_bucharest/" target="_blank">View GitHub Repo</a>
+            <a href="https://rriamarria.github.io/walking_in_bucharest/" target="_blank" className='s'> View Website</a><br/>
+            <a href="https://github.com/rriamarria/walking_in_bucharest" target="_blank" className='s'> View GitHub Repo</a>
         <ul>
       <li>Front-end: HTML, CSS and JavaScript</li>
       </ul>
     </div>
     } else if (props === 1) {
         return <div>
-            <a href="http://rriamarria.github.io/real_time_iss_tracker" target="_blank">View Website</a><br/>
-            <a href="https://github.com/rriamarria/real_time_iss_tracker" target="_blank">View GitHub</a>
+            <a href="http://rriamarria.github.io/real_time_iss_tracker" target="_blank" className='s'> View Website</a><br/>
+            <a href="https://github.com/rriamarria/real_time_iss_tracker" target="_blank" className='s'> View GitHub</a>
 
             <ul>
           <li>Front-end: React, Axios, React-Bootstrap</li>
@@ -47,8 +47,8 @@ function setContent(props) {
         </div>
     } else if (props === 2) {
         return <div>
-            <a href="https://wildcodeschool.github.io/bucharest-project3-interactive-platform/" target="_blank" >View Website</a><br/>
-            <a href="https://github.com/WildCodeSchool/bucharest-project3-interactive-platform/tree/develop" target="_blank">View GitHub</a>
+            <a href="https://wildcodeschool.github.io/bucharest-project3-interactive-platform/" target="_blank" className='s'> View Website</a><br/>
+            <a href="https://github.com/WildCodeSchool/bucharest-project3-interactive-platform/tree/develop" target="_blank" className='s'> View GitHub</a>
             <ul>
                 <li>Datastore: MySql</li>
                 <li>Back-end: Node.js, Express, Sequalize, JWT, Passport.js, Redux</li>

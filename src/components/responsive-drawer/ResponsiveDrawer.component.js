@@ -158,7 +158,7 @@ const ResponsiveDrawer = (props) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-           <a href="https://www.linkedin.com/in/maria-marinescu/" target="_blank" rel="noopener norefferer"> Maria Marinescu </a>
+           <a href="https://www.linkedin.com/in/maria-marinescu/" target="_blank" rel="noopener norefferer" className="rria"> Maria Marinescu </a>
           </Typography>
         </Toolbar>
       </AppBar>

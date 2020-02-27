@@ -163,8 +163,7 @@ export default function MobileStepper() {
 
   const handleNext = () => {
     setActiveStep(prevActiveStep => prevActiveStep + 1);
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+
   };
 
   const handleBack = () => {
