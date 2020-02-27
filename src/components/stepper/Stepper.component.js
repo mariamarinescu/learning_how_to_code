@@ -200,7 +200,7 @@ function resPendingJob() {
       <li> fully present with everyone I interact, caring about their needs and understand them</li>
       <li> genuinely curious</li>
       <li> resistant to pressure => able to code in a high stress work environment </li>
-      <li> one of the lucky ones, because, until this moment of time, I gained social and self awareness <br/>and it helps me at every step I take.</li>
+      <li> one of the lucky ones, because, until this moment in time, I started to gain social and self awareness <br/>and it helps me at every step I take.</li>
       <li> trying to combine artistic and technical thinking 😁</li>
       <li> eager to learn to code in Java</li>
 
