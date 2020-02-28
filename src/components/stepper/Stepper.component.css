@@ -6,6 +6,10 @@ svg.MuiSvgIcon-root#icon {
 }
 
 /**/
+
+svg.MuiSvgIcon-root {
+  cursor: pointer;
+}
 .MuiStepIcon-root.MuiStepIcon-active,
 .MuiStepIcon-root.MuiStepIcon-completed
   {
