@@ -130,8 +130,8 @@ function resSelfStudy() {
     <ul className="check">
       <li>
         I started to study between 7h - 12h/day on platforms as:
-          <a href="https://pluralsight.com" target="_blank" rel="noopener norefferer" className="s"> PluralSight.com</a>,
-          <a href="https://safaribooksonline.com" target="_blank" rel="noopener norefferer" className="s"> Safari Books Online</a>
+          <a href="https://pluralsight.com" target="_blank" rel="noopener norefferer"> PluralSight.com</a>,
+          <a href="https://safaribooksonline.com" target="_blank" rel="noopener norefferer"> Safari Books Online</a>
       </li>
       <hr />
 
