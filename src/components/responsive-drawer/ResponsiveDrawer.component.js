@@ -154,8 +154,9 @@ const ResponsiveDrawer = (props) => {
             className={clsx(classes.menuButton, {
               [classes.hide]: open,
             })}
+            id="icon"
           >
-            <MenuIcon />
+            <MenuIcon style={{textShadow: '1px 1px 3px rgba(0,0,0,0.5)'}}/>
           </IconButton>
           <Typography variant="h6" noWrap>
            <a href="https://www.linkedin.com/in/maria-marinescu/" target="_blank" rel="noopener norefferer" className="rria"> Maria Marinescu </a>
@@ -176,8 +177,8 @@ const ResponsiveDrawer = (props) => {
         }}
       >
         <div className={classes.toolbar}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+          <IconButton onClick={handleDrawerClose} id="icon">
+            {theme.direction === 'rtl' ? <ChevronRightIcon id="icon"/> : <ChevronLeftIcon id="icon"/>}
           </IconButton>
         </div>
 
@@ -185,21 +186,21 @@ const ResponsiveDrawer = (props) => {
 
         <List>
           <ListItem>
-            <ListItemIcon> <div className={classes.icon}><TitleIcon clasName="icon" /></div> </ListItemIcon>
+            <ListItemIcon> <div className={classes.icon}><TitleIcon id="icon" /></div> </ListItemIcon>
             <ListItemText primary={"Quick links"} />
           </ListItem>
 
           <Divider />
 
           <ListItem button>
-            <ListItemIcon><div className={classes.icon}> <LanguageIcon clasName="icon" /></div> </ListItemIcon>
+            <ListItemIcon><div className={classes.icon}> <LanguageIcon id="icon"/></div> </ListItemIcon>
             <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer"> <ListItemText primary={"Make-up Artist Portfolio"} /></a>
           </ListItem>
 
           <Divider />
 
           <ListItem button >
-            <ListItemIcon> <div className={classes.icon}><LanguageIcon /></div> </ListItemIcon>
+            <ListItemIcon> <div className={classes.icon}><LanguageIcon id="icon"/></div> </ListItemIcon>
             <a href="https://wildcodeschool.github.io/bucharest-project3-interactive-platform/#/" target="_blank" rel="noopener norefferer"><ListItemText primary={"Techir Interactive"} /></a>
           </ListItem>
 
@@ -208,14 +209,14 @@ const ResponsiveDrawer = (props) => {
 
 
           <ListItem button >
-            <ListItemIcon> <div className={classes.icon}><LanguageIcon /></div> </ListItemIcon>
+            <ListItemIcon> <div className={classes.icon}><LanguageIcon id="icon" /></div> </ListItemIcon>
             <a href="http://rriamarria.github.io/real_time_iss_tracker" target="_blank" rel="noopener norefferer"> <ListItemText primary={"ISS tracker"} /></a>
           </ListItem>
 
           <Divider />
 
           <ListItem button >
-            <ListItemIcon> <div className={classes.icon}><LanguageIcon /></div> </ListItemIcon>
+            <ListItemIcon> <div className={classes.icon}><LanguageIcon  id="icon"/></div> </ListItemIcon>
             <a href="https://rriamarria.github.io/walking_in_bucharest/" target="_blank" rel="noopener norefferer"> <ListItemText primary={"Walking tour of Bucharest"} /></a>
           </ListItem>
 
@@ -224,21 +225,21 @@ const ResponsiveDrawer = (props) => {
      
           
           <ListItem button >
-            <ListItemIcon> <div className={classes.icon}><GitHubIcon /></div> </ListItemIcon>
+            <ListItemIcon> <div className={classes.icon}><GitHubIcon id="icon"/></div> </ListItemIcon>
            <a href="https://github.com/mariamarinescu/learning_how_to_code" target="_blank" rel="noopener norefferer"> <ListItemText primary={"this.Repository"} /></a>
           </ListItem>
 
           <Divider />
           <Divider/>
           <ListItem button >
-            <ListItemIcon> <div className={classes.icon}><GitHubIcon /></div> </ListItemIcon>
+            <ListItemIcon> <div className={classes.icon}><GitHubIcon id="icon" /></div> </ListItemIcon>
             <a href="https://github.com/mariamarinescu?tab=overview&from=2019-12-01&to=2019-12-31" target="_blank" rel="noopener norefferer">   <ListItemText primary={"Old GitHub acc."} /> </a>
           </ListItem>
           
         <Divider/>
           <Divider/>
           <ListItem button >
-            <ListItemIcon><div className={classes.icon}> <GitHubIcon /></div> </ListItemIcon>
+            <ListItemIcon><div className={classes.icon}> <GitHubIcon id="icon"/></div> </ListItemIcon>
             <a href="https://github.com/rriamarria" target="_blank" rel="noopener norefferer">   <ListItemText primary={"New GitHub acc."} /> </a>
           </ListItem>
         <Divider/>

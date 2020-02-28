@@ -1,8 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+/*drawer*/
+
+svg.MuiSvgIcon-root#icon {
+  filter: drop-shadow(0rem 0rem .3rem black);
+}
+
+/**/
 .MuiStepIcon-root.MuiStepIcon-active,
 .MuiStepIcon-root.MuiStepIcon-completed
   {
   color: #2c9c91!important;
+}
+
+#bttn-sttp {
+  outline: none;
+  background: none;
+}
+
+.MuiSvgIcon-root {
+  color: white;
 }
 .makeStyles-button-153,
 .MuiButton-contained {
