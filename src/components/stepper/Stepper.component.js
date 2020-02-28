@@ -318,10 +318,11 @@ function HorizontalNonLinearStepper(move) {
                 root: classes.step,
                 completed: classes.completed,
                 active: classes.active
-              }} >
-                <StepLabel onClick={handleStep(index)}
-                    completed={isStepComplete(index)}>
-                  <StepButton
+              }}
+              onClick={handleStep(index)}
+                    completed={isStepComplete(index)} >
+                <StepLabel >
+                  <StepButton style={{width: 'auto', height: 'auto', border: 'transparent'}}
                     
                     {...buttonProps}
                   >
