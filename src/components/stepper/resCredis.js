@@ -18,7 +18,7 @@ function resCredis() {
         <li> Basic JS algorithms</li>
         <li> Interacting with HTTP server</li>
       </ul>
-      <a href="https://www.academiacredis.ro/curs-programare-web1" target="_blank" rel="noopener norefferer" style={{ fontSize: '144%' }} className="s" > Course - click me</a>
+      <a href="https://www.academiacredis.ro/curs-programare-web1" target="_blank" rel="noopener norefferer" className="s" > Course - click me</a>
     </div>
   };
 

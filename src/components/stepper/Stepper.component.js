@@ -5,7 +5,6 @@ import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import CloseIcon from '@material-ui/icons/Close';
 import StepLabel from '@material-ui/core/StepLabel';
 import { withRouter } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
@@ -20,8 +19,6 @@ import {resWCSContest} from './resWCSContest';
 // import firebase from 'firebase';
 
 import './Stepper.component.css';
-import * as imgMobile from '../../assets/click.png';
-import * as imgDesktop from '../../assets/rsz_mouse.png';
 require('dotenv').config();
 
 const useStyles = makeStyles(theme => ({
@@ -179,8 +176,7 @@ function HorizontalNonLinearStepper() {
       xs={12} sm={12} md={12} lg={12} xl={12}
     >
       <div className={classes.root}>
-        <img src={imgMobile} className={classes.clickMobile} id="clickmobile" />
-        <img src={imgDesktop} className={classes.clickDesktop} id="clickdesktop" />
+       
         <Stepper alternativeLabel activeStep={activeStep} id="stepper" style={{ flexGrow: 0 }}>
           {steps.map((label, index) => {
             const stepProps = {};
@@ -210,8 +206,8 @@ function HorizontalNonLinearStepper() {
             );
           })}
         </Stepper>
-        <div>
-          <div>
+    
+         
             <Typography className={classes.instructions}></Typography>
             <div>{getStepContent(activeStep)}</div>
             <div className={classes.buttons}>
@@ -231,8 +227,8 @@ function HorizontalNonLinearStepper() {
             </div>
           </div>
 
-        </div>
-      </div>
+      
+  
     </Grid>
   );
 }

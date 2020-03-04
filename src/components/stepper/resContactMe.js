@@ -2,10 +2,10 @@ import React from 'react';
  
  
  function resContactMe() {
-    return  <div class="portfoliocard">
-    <div class="coverphoto"></div>
-    <div class="profile_picture"></div>
-    <div class="left_col">
+    return  <div className="portfoliocard">
+    <div className="coverphoto"></div>
+    <div className="profile_picture"></div>
+    <div className="left_col">
     <h2 className="name">Maria Marinescu</h2>
       <h3 className="location">Bucharest, RO</h3>
       <ul className="contact_information">

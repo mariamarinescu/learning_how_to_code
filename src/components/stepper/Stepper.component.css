@@ -14,15 +14,15 @@ div.portfoliocard {
   border-radius: 6px;
   /* margin: 62px; */
   /* margin:10% auto; */
+  top: 15px;
   overflow: hidden;
   z-index: 100;
-  align-self: flex-start;
-  margin-left: 55px;
+  margin: 0 auto;
 }
 div.portfoliocard div.coverphoto {
   width: 100%;
   height: 120px;
-  background: url("http://farm8.staticflickr.com/7149/6484148411_baf8d2e934_z.jpg");
+  background: url("https://cdn.pixabay.com/photo/2017/12/01/15/44/merligen-2991122_960_720.jpg");
   background-position: center center;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -199,7 +199,15 @@ div.content {
 body {
   font-family: "Josefin Sans", sans-serif !important;
 }
-
+        
+.card-title2, .card-text2 {
+  font-size: 0.6vh!important;
+  width: 90%;
+}  
+.card-title3, .card-text3 {
+  font-size: 3vh;
+  width: 90%;
+}
 #stepper {
   position: relative !important;
 }
@@ -208,7 +216,10 @@ body {
   position: relative;
   left: -20px;
 }
-
+.card-title {
+  padding-top: 22px;
+  text-align: center;
+}
 @media (max-width: 250px) {
   img#clickmobile {
     left: 3%;
@@ -217,13 +228,18 @@ body {
 }
 
 @media (min-width: 251px) {
-  img#clickmobile {
-    left: 20%;
-    top: 155px !important;
+.font,.s {
+  font-size: 2.5vh;
+}
+  div.content1 {
+    padding: 0px !important;
+    margin: 10px 10px 10px!important;
+    width: 80%;
   }
+
 }
 
-@media only screen and (max-width: 510px) {
+@media (max-width: 510px) {
   img#clickmobile {
     left: 23%;
     top: -166px !important;
@@ -231,12 +247,23 @@ body {
   div#pending {
     font-size: 2vh!important;
   }
-}
-@media only screen and (max-width: 600px) {
-  img#clickmobile {
-    left: 20%;
-    top: -166px !important;
+  .MuiTypography-body2 {
+    font-weight: 0;
+    line-height: 0;
+    letter-spacing: 0;
+    font-size: 0.5vh;
+
   }
+  .font,.s {
+    font-size: 2.5vh;
+  }
+    div.content1 {
+      padding: 0px !important;
+      margin: 10px 10px 10px!important;
+      width: 80%;
+    }
+}
+@media (max-width: 600px) {
   .flip-card,
   .flip-card2,
   .flip-card3,
@@ -245,6 +272,8 @@ body {
   }
   #stepper {
     display: inline-block;
+    padding-top: 70px;
+    position: relative
   }
   div.content {
     flex-direction: column !important;
@@ -254,6 +283,11 @@ body {
     text-align: center;
     justify-content: center;
   }
+  div.content1 {
+    padding: 0px !important;
+    margin: 10px 10px 10px!important;
+    width: 90%;
+  }
 
   div.MuiStepper-vertical {
     font-family: "Josefin Sans", sans-serif !important;
@@ -261,9 +295,21 @@ body {
   .makeStyles-button-149 {
     margin: 22px !important;
   }
+
 }
 
-@media only screen and (min-width: 600px) {
+@media  (min-width: 600px) {
+  .font,.s {
+    font-size: 2.5vh;
+  }
+    div.content1 {
+      padding: 0px !important;
+      margin: 10px 20px 10px!important;
+      width: 90%;
+    }
+    #stepper {
+      margin: 88px 0px 0px;
+    }
   div.content {
     flex-direction: column ;
     align-content: center;
@@ -278,20 +324,16 @@ body {
   .flip-card4 {
     margin: 44px;
   }
-  img#clickmobile {
-    left: 38%;
-    top: 99px !important;
-    /* width: 80% */
-  }
+
   main {
     padding: 0 !important;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media  (min-width: 768px) {
 }
 
-@media only screen and (min-width: 992px) {
+@media  (min-width: 992px) {
   div.content {
     padding: 66px !important;
   }
@@ -303,14 +345,11 @@ body {
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  #stepper {
-    margin: 0 auto;
-  }
-}
+@media  (min-width: 1200px) {
 
+}
 .card-title {
-  /* margin-left: 22px; */
+
 }
 .flip-card,
 .flip-card2,
@@ -354,12 +393,18 @@ body {
   z-index: 2;
 }
 
+.flip-card-front img {
+  position: relative;
+  top: 100px;
+}
+
 .flip-card-back {
   background-color: white;
   color: black;
   transform: rotateY(180deg);
   text-align: center;
   z-index: 1;
+  font-size: 1.8vh!important;
 }
 div.content {
   position: relative;
@@ -387,7 +432,10 @@ div#pending {
 div.content1 {
   font-family: "Josefin Sans", sans-serif !important;
   position: relative;
-  display: block;
-  font-size: 85%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  font-size: 2.4vh;
+  /* font-size: 85%; */
+  margin: 22px 77px 0px 55px;
 }
