@@ -5,51 +5,28 @@ import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import VerticalLinearStepper from '../second-stepper/SecondStepper.component'
 import CloseIcon from '@material-ui/icons/Close';
 import StepLabel from '@material-ui/core/StepLabel';
 import { withRouter } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
-import { Dropbox } from 'dropbox';
+import {resContactMe} from './resContactMe';
+import {resPendingJob} from './resPendingJob';
+import {resWCS} from './resWCS';
+import {resCredis} from './resCredis';
+import {resSelfStudy} from './resSelfStudy';
+import {resWCSContest} from './resWCSContest';
+
+
 // import firebase from 'firebase';
 
 import './Stepper.component.css';
 import * as imgMobile from '../../assets/click.png';
 import * as imgDesktop from '../../assets/rsz_mouse.png';
-const WCSprefix = "https://www.wildcodeschool.com/en-GB";
 require('dotenv').config();
-const imgPersonal = require('../../assets/personal.png');
-const imgSocial = require('../../assets/social.png')
-const imgM = require('../../assets/methodical.png')
-
-
-
-const accessToken = process.env.DROPBOX;
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '100%',
-    position: 'relative',
-    fontSize: '140%',
-    height: 'auto',
-    width: 'auto',
-    position: 'relative',
-    [theme.breakpoints.down('sm')]: {
-      top: '55px',
-      width: '93%',
-      padding: '11px'
-    },
-
-    [theme.breakpoints.up('md')]: {
-      top: '55px',
-      width: '88%'
-
-    },
-    [theme.breakpoints.up('lg')]: {
-      top: '71px',
-      width: '97%'
-
-    },
+    fontSize: '3vh'
   },
   buttons: {
     left: '5%',
@@ -61,7 +38,6 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     zIndex: 10,
     [theme.breakpoints.down('sm')]: {
-
     },
     [theme.breakpoints.up('sm')]: {
       left: '13%',
@@ -98,340 +74,22 @@ const useStyles = makeStyles(theme => ({
 
   },
   stepper1: {
-    // margin: '0 auto'
   },
   button: {
     marginRight: theme.spacing(3),
     margin: 6
   },
   completed: {
-    // margin: '0 auto'
   },
   instructions: {
     fontSize: 4
     // margin: '0 auto'
   },
 }));
-
 function getSteps() {
-  return ['Web Programming I', 'Self-study', 'Scholarship contest', 'JS Full-stack Developer Bootcamp', 'Full-stack Developer'];
+  return ['Web Programming I', 'Self-study', 'Scholarship contest', 'JS Full-stack Developer Bootcamp', 'Full-stack Developer', 'Contact me'];
 }
 
-function resCredis() {
-  return <div className="content1">
-    <h3>Web Programming I - Client Side Technologies</h3>
-    <h3>HTML, CSS and JS fundamentals</h3>
-    <h3><a href="https://www.academiacredis.ro" target="_blank" rel="noopener norefferer" className="s"> Credis Academy</a></h3>
-    <h5 >Instructor: <a href="https://www.linkedin.com/in/theodor-tanase/" target="_blank" rel="noopener norefferer" className="s" > Theodor Tanase</a></h5>
-    <p> During the 'Web Programming I', I discovered my passion <br />and  inclination towards programming, I took my first steps into it && I learnt about:</p>
-    <ul className="check">
-      <li> HTML Basics</li>
-      <li> CSS standards and good practices</li>
-      <li> Creating modern responsive web pages</li>
-      <li> JavaScript basics</li>
-      <li> Accessing and manipulating the DOM using jQuery</li>
-      <li> Asynchronous programming in JavaScript</li>
-      <li> Basic JS algorithms</li>
-      <li> Interacting with HTTP server</li>
-    </ul>
-    <a href="https://www.academiacredis.ro/curs-programare-web1" target="_blank" rel="noopener norefferer" style={{ fontSize: '144%' }} className="s" > Course - click me</a>
-  </div>
-};
-function resSelfStudy() {
-  return <div className="content1">
-    <ul className="check">
-      <li>
-        I started to study between 7h - 12h/day on platforms as:
-          <a href="https://pluralsight.com" target="_blank" rel="noopener norefferer"> PluralSight.com</a>,
-          <a href="https://safaribooksonline.com" target="_blank" rel="noopener norefferer"> Safari Books Online</a>
-      </li>
-      <hr />
-
-      <li>
-        I started to learn modern technology stack, settled to use in the project:
-              <ul id="not-checked">
-          <li> Back-end (serverless): Node.js with TypeScript, Google Firebase Functions, SendGrid (send e-mail via contact form)</li>
-          <li> Front-end: TypeScript, Angular8, SASS, Internationalization (i18n) - multi-language support, Google Firebase: WebApp, Authentication, Storage </li>
-          <li> Testing: <a href="https://angular.io/guide/testing#component-test-basics" target="_blank" rel="noopener norefferer">Angular Component Testing</a>,
-          <a href="https://www.protractortest.org" target="_blank" rel="noopener norefferer">Protractor e2e Tests</a></li>
-
-        </ul>
-      </li>
-      <hr />
-      <li> After about 6 months of hard work I managed to have this: <br />
-        <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer" className="s">  - Make-up Artist Portfolio Website - click me</a> <br />
-        <a href="https://github.com/mariamarinescu/MUA_portfolio" target="_blank" rel="noopener norefferer" className="s">  - GitHub Repo - click me</a>
-      </li>
-    </ul>
-    <p></p>
-  </div>
-}
-function resWCSContest() {
-  return <div className="content1">
-    <h3>SkillValue & Wild Code School Romania</h3>
-    <p>Contest checkmarks:</p>
-    <ul className="check">
-      <li> SkillValue Quiz</li>
-      <li> Earn all required badges for: <a href="https://www.codecademy.com/users/MariaMarinescu/achievements" target="_blank" rel="noopener norefferer" > Code Academy</a> and <a href="https://www.sololearn.com/Profile/4152053" target="_blank" > SoloLearn</a></li>
-      <li> Fully responsive final project based on requirements: <br /><a href="https://codepen.io/rria/pen/MWgqQzx" target="_blank" rel="noopener norefferer" className="s"> Project Link - click me</a></li>
-    </ul>
-    <h4> <a href="https://www.facebook.com/wildcodeschoolromania/posts/500527294080499:0" target="_blank" rel="noopener norefferer" className="s"> Winner announcement - click me</a></h4>
-    <hr />
-    <h4>Prize details:</h4>
-    <ul>
-      <li>School: <a href={WCSprefix} target="_blank" rel="noopener norefferer" > Wild Code School - click me</a></li>
-      <li>Program : <a href={`${WCSprefix}/trainings/web-developer-full-time?campus=bucharest`} target="_blank" rel="noopener norefferer"> JS Full-stack Developer Bootcamp - click me</a></li>
-      <li>Duration: 752h / 5 months</li>
-      <li>Starting Date: 29.07.2019</li>
-      <li>Ending Date: 21.02.2020</li>
-    </ul>
-  </div>
-};
-function resWCS() {
-  return <div className="content1">
-    <h3><a href={`${WCSprefix}/trainings/web-developer-full-time?campus=bucharest`} target="_blank" rel="noopener norefferer" className="s"> Wild Code School Romania</a> - Full-stack Javascript Developer Course</h3>
-    <h5 >Instructor: <a href="https://www.linkedin.com/in/cosmin-andrei-con%C8%9Bu-05144a103/" target="_blank" rel="noopener norefferer" > Cosmin Contu</a></h5>
-
-    <ul>
-      <li>Program : <a href={`${WCSprefix}/trainings/web-developer-full-time?campus=bucharest`} target="_blank" rel="noopener norefferer"> JS Fullstack Developer Bootcamp</a></li>
-      <li> Course syllabus: <a href={`${WCSprefix}/trainings/web-developer-full-time?campus=bucharest&fbclid=IwAR1KjYFSgZ19fB-vj1wsNuiu_FKE17ytp3_7ZuEaYj3gYsG6Ku89mmW0Eok`}
-        target="_blank" rel="noopener norefferer"> Click Me</a></li>
-      <li>From day one we started to work as teams, using Agile Methodologies, using <a href="https://www.trello.com" target="_blank" rel="noopener norefferer">
-        Trello</a> for tasks,<br /> scrum sprints and sprints backlog.</li>
-
-      <li>3 team projects:</li>
-    </ul>
-    <VerticalLinearStepper />
-  </div>
-};
-function getResume() {
-  // const storage = firebase.storage();
-  // const storageRef = storage.ref();
-  // var resumeRef = storageRef.child('/resume.pdf');
-  // resumeRef.getDownloadURL().then(function (url) {
-  //   var xhr = new XMLHttpRequest();
-  //   xhr.responseType = 'blob';
-  //   xhr.onload = function (event) {
-  //     var blob = xhr.response;
-  //   };
-  //   xhr.open('GET', url);
-  //   xhr.send();
-  //   var img = document.getElementById('myimg');
-  //   img.src = url;
-  // }).catch(function (error) {
-  //   // Handle any errors
-  // });
-}
-function resPendingJob() {
-  return <div className="fullstack"><div class="portfoliocard">
-    <div class="coverphoto"></div>
-    <div class="profile_picture"></div>
-    <div class="left_col">
-    <h2 className="name">Maria Marinescu</h2>
-      <h3 className="location">Bucharest, RO</h3>
-      <ul className="contact_information">
-        <li className="work">Junior JS Developer</li>
-        <li className="website"><a className="nostyle" href="https://my-journey-through-programming.firebaseapp.com/" target="_blank">this.website</a></li>
-        <li className="mail" style={{ fontSize: '12px' }}><a href="mailto:mariafmarinescu@outlook.com">mariafmarinescu@outlook.com</a></li>
-        <li className="phone">+40722.868.038</li>
-        {/* <a href="https://dl.dropboxusercontent.com/s/s2o1rvwt5g24jmm/resume.pdf" class="dropbox-saver">download resume</a> */}
-
-        {/* <form method="get" action='https://firebasestorage.googleapis.com/v0/b/my-journey-through-programming.appspot.com/o/resume.pdf?alt=media'>
-   <button type="submit">Download!</button>
-</form> */}
-        <li class="resume"><a href="https://firebasestorage.googleapis.com/v0/b/my-journey-through-programming.appspot.com/o/resume.pdf?alt=media" target="_blank" class="nostyle">download resume</a></li>
-      </ul>
-    </div>
-    <div className="right_col">
-      
-    </div>
-  </div>
-  <div className="content">
-  <div className="cards-container" >
-  <div
-      className="flip-card"
-  
-    >
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
-  
-          <img
-            className="card-front"
-            src={imgPersonal}
-            alt=""
-            style={{maxWidth:'90%',maxHeight:'80%'}}
-          />
-        </div>
-        <div className="flip-card-back ">
-        <h5
-            className="card-title "
-          
-          >And the following sub-skills:</h5>
-          <ul className="card-text">
-            <li
-            > I am a fast learner</li>
-             <li
-           > I am driven to continue to evolve towards reaching my full potential</li>
-         <li>I am genuinely curious</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div
-      className="flip-card2"
-  
-    >
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
-        
-          <img
-            // className="card-front"
-            src={imgSocial}
-            alt=""
-            style={{maxWidth:'70%',maxHeight:'20%'}}
-          />
-        </div>
-        <div className="flip-card-back ">
-        <h5
-            className="card-title "
-          
-          >And the following sub-skills:</h5>
-          <ul className="card-text">
-            <li
-            > I am fully present with everyone I interact, caring about their needs and understand them </li>
-             <li
-           > I am one of the lucky ones, because, until this moment in time, I started to gain social and self awareness and it helps me at every step I take.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  
-    <div
-      className="flip-card3"
-  
-    >
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
-          <h5
-            className="card-title"
-          ></h5>
-          <img
-            className="card-front"
-            src={imgM}
-            alt=""
-            style={{width:'220px',height:'200px'}}
-          />
-        </div>
-        <div className="flip-card-back">
-          <h5
-            className="card-title "
-          
-          >And the following sub-skills:</h5>
-          <ul className="card-text">
-       
-            <li
-            >delivery of value oriented.</li>
-             <li
-           >passionate about disruptive tech.
-           </li>
-         <li>eager to be part of a team that builds tomorrow's technology.</li>
-         <li> resistant to pressure</li>
-         <li>trying to combine artistic and technical thinking.</li>
-         <li>eager to learn to code in Java.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div
-      className="flip-card4"
-  
-    >
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
-          <h5
-            className="card-title"
-          ></h5>
-          <img
-            className="card-front"
-            src={imgPersonal}
-            alt=""
-            style={{width:'160px',height:'200px'}}
-          />
-        </div>
-        <div className="flip-card-back">
-          <h5
-            className="card-title "
-          
-          >And the following sub-skills:</h5>
-          <ul className="card-text">
-       
-            <li
-            >delivery of value oriented.</li>
-             <li
-           >passionate about disruptive tech.
-           </li>
-         <li>eager to be part of a team that builds tomorrow's technology.</li>
-         <li> resistant to pressure</li>
-         <li>trying to combine artistic and technical thinking.</li>
-         <li>eager to learn to code in Java.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-     {/* <h4>Even though at the beginning of my journey, I can state that I am:</h4>
-     <ul className="check">
-       <li> a fast learner</li>
-       <li> delivery of value oriented</li>
-       <li> passionate about disruptive tech</li>
-       <li> eager to be part of a team that builds tomorrow's technology</li>
-       <li> driven to continue to evolve towards reaching my full potential</li>
-       <li> fully present with everyone I interact, caring about their needs and understand them</li>
-       <li> genuinely curious</li>
-       <li> resistant to pressure => able to code in a high stress work environment </li>
-       <li> one of the lucky ones, because, until this moment in time, I started to gain social and self awareness <br/>and it helps me at every step I take.</li>
-       <li> trying to combine artistic and technical thinking 😁</li>
-       <li> eager to learn to code in Java</li>
-
-     </ul>
-     <h4>And also that I am <strong>not</strong>:</h4>
-
-     <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> clinging on the technologies I used so far, especially on the backend side </p>
-     <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> looking for a dull job to work at </p>
-     <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> doing the same things every day </p> */}
-
-
-
-   </div>
- 
-  // return <div className="content">
-  //   <h4>Even though at the beginning of my journey, I can state that I am:</h4>
-  //   <ul className="check">
-  //     <li> a fast learner</li>
-  //     <li> delivery of value oriented</li>
-  //     <li> passionate about disruptive tech</li>
-  //     <li> eager to be part of a team that builds tomorrow's technology</li>
-  //     <li> driven to continue to evolve towards reaching my full potential</li>
-  //     <li> fully present with everyone I interact, caring about their needs and understand them</li>
-  //     <li> genuinely curious</li>
-  //     <li> resistant to pressure => able to code in a high stress work environment </li>
-  //     <li> one of the lucky ones, because, until this moment in time, I started to gain social and self awareness <br/>and it helps me at every step I take.</li>
-  //     <li> trying to combine artistic and technical thinking 😁</li>
-  //     <li> eager to learn to code in Java</li>
-
-  //   </ul>
-  //   <h4>And also that I am <strong>not</strong>:</h4>
-
-  //   <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> clinging on the technologies I used so far, especially on the backend side </p>
-  //   <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> looking for a dull job to work at </p>
-  //   <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> doing the same things every day </p>
-
-
-
-  // </div>
-}
 function getStepContent(step) {
 
   switch (step) {
@@ -445,13 +103,14 @@ function getStepContent(step) {
       return resWCS();
     case 4:
       return resPendingJob();
-
+    case 5:
+      return resContactMe();
     default:
       return 'Unknown step';
   }
 }
 
-function HorizontalNonLinearStepper(move) {
+function HorizontalNonLinearStepper() {
 
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -517,7 +176,7 @@ function HorizontalNonLinearStepper(move) {
 
   return (
     <Grid item
-      xs={11} sm={11} md={10} lg={10} xl={10}
+      xs={12} sm={12} md={12} lg={12} xl={12}
     >
       <div className={classes.root}>
         <img src={imgMobile} className={classes.clickMobile} id="clickmobile" />
@@ -560,7 +219,7 @@ function HorizontalNonLinearStepper(move) {
                 Back
               </Button>
               <Button
-                disabled={activeStep === 4}
+                disabled={activeStep === 5}
                 variant="contained"
                 color="primary"
                 onClick={handleNext}

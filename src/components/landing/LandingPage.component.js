@@ -7,7 +7,7 @@ import './LandingPage.component.css';
 const particleOpt = {
   particles: {
   number: {
-    value:222, 
+    value:182, 
     density: {
       enable: true, 
       value_area: 800

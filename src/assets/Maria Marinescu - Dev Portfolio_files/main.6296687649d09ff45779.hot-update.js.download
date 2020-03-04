@@ -1,0 +1,1354 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/components/stepper/Stepper.component.js":
+/*!*****************************************************!*\
+  !*** ./src/components/stepper/Stepper.component.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
+/* harmony import */ var _material_ui_core_Stepper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Stepper */ "./node_modules/@material-ui/core/esm/Stepper/index.js");
+/* harmony import */ var _material_ui_core_Step__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Step */ "./node_modules/@material-ui/core/esm/Step/index.js");
+/* harmony import */ var _material_ui_core_StepButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/StepButton */ "./node_modules/@material-ui/core/esm/StepButton/index.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
+/* harmony import */ var _second_stepper_SecondStepper_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../second-stepper/SecondStepper.component */ "./src/components/second-stepper/SecondStepper.component.js");
+/* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Close */ "./node_modules/@material-ui/icons/Close.js");
+/* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _material_ui_core_StepLabel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/StepLabel */ "./node_modules/@material-ui/core/esm/StepLabel/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
+/* harmony import */ var dropbox__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! dropbox */ "./node_modules/dropbox/dist/Dropbox-sdk.min.js");
+/* harmony import */ var dropbox__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(dropbox__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _Stepper_component_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Stepper.component.css */ "./src/components/stepper/Stepper.component.css");
+/* harmony import */ var _Stepper_component_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_Stepper_component_css__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _assets_click_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../assets/click.png */ "./src/assets/click.png");
+/* harmony import */ var _assets_click_png__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_assets_click_png__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _assets_rsz_mouse_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../assets/rsz_mouse.png */ "./src/assets/rsz_mouse.png");
+/* harmony import */ var _assets_rsz_mouse_png__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_assets_rsz_mouse_png__WEBPACK_IMPORTED_MODULE_15__);
+var _jsxFileName = "C:\\Users\\andrei.morarescu\\Desktop\\my_journey\\learning_how_to_code\\src\\components\\stepper\\Stepper.component.js";
+
+
+
+
+
+
+
+
+
+
+
+
+ // import firebase from 'firebase';
+
+
+
+
+const WCSprefix = "https://www.wildcodeschool.com/en-GB";
+
+__webpack_require__(/*! dotenv */ "./node_modules/dotenv/lib/main.js").config();
+
+const imgPersonal = __webpack_require__(/*! ../../assets/personal.png */ "./src/assets/personal.png");
+
+const imgSocial = __webpack_require__(/*! ../../assets/social.png */ "./src/assets/social.png");
+
+const imgM = __webpack_require__(/*! ../../assets/methodical.png */ "./src/assets/methodical.png");
+
+const accessToken = Object({"NODE_ENV":"development","PUBLIC_URL":"","WDS_SOCKET_HOST":undefined,"WDS_SOCKET_PATH":undefined,"WDS_SOCKET_PORT":undefined}).DROPBOX;
+const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(theme => ({
+  root: {
+    width: '100%',
+    position: 'relative',
+    fontSize: '140%',
+    height: 'auto',
+    width: 'auto',
+    position: 'relative',
+    [theme.breakpoints.down('sm')]: {
+      top: '55px',
+      width: '93%',
+      padding: '11px'
+    },
+    [theme.breakpoints.up('md')]: {
+      top: '55px',
+      width: '88%'
+    },
+    [theme.breakpoints.up('lg')]: {
+      top: '71px',
+      width: '97%'
+    }
+  },
+  buttons: {
+    left: '5%',
+    position: 'relative'
+  },
+  clickMobile: {
+    width: '33px',
+    position: 'relative',
+    zIndex: 10,
+    [theme.breakpoints.down('sm')]: {},
+    [theme.breakpoints.up('sm')]: {
+      left: '13%',
+      top: '0px!important'
+    },
+    [theme.breakpoints.up('md')]: {
+      left: '13%',
+      top: '0px!important'
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'none'
+    }
+  },
+  clickDesktop: {
+    width: '48px',
+    height: '48px',
+    position: 'relative',
+    zIndex: 10,
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    },
+    [theme.breakpoints.up('sm')]: {
+      display: 'none'
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'none'
+    },
+    [theme.breakpoints.up('lg')]: {
+      left: '31.6%',
+      top: '77px',
+      display: 'inline-block'
+    }
+  },
+  stepper1: {// margin: '0 auto'
+  },
+  button: {
+    marginRight: theme.spacing(3),
+    margin: 6
+  },
+  completed: {// margin: '0 auto'
+  },
+  instructions: {
+    fontSize: 4 // margin: '0 auto'
+
+  }
+}));
+
+function getSteps() {
+  return ['Web Programming I', 'Self-study', 'Scholarship contest', 'JS Full-stack Developer Bootcamp', 'Full-stack Developer'];
+}
+
+function resCredis() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 121
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 122
+    },
+    __self: this
+  }, "Web Programming I - Client Side Technologies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 123
+    },
+    __self: this
+  }, "HTML, CSS and JS fundamentals"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.academiacredis.ro",
+    target: "_blank",
+    rel: "noopener norefferer",
+    className: "s",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
+    },
+    __self: this
+  }, " Credis Academy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125
+    },
+    __self: this
+  }, "Instructor: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.linkedin.com/in/theodor-tanase/",
+    target: "_blank",
+    rel: "noopener norefferer",
+    className: "s",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125
+    },
+    __self: this
+  }, " Theodor Tanase")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126
+    },
+    __self: this
+  }, " During the 'Web Programming I', I discovered my passion ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126
+    },
+    __self: this
+  }), "and  inclination towards programming, I took my first steps into it && I learnt about:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "check",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 128
+    },
+    __self: this
+  }, " HTML Basics"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129
+    },
+    __self: this
+  }, " CSS standards and good practices"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 130
+    },
+    __self: this
+  }, " Creating modern responsive web pages"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 131
+    },
+    __self: this
+  }, " JavaScript basics"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 132
+    },
+    __self: this
+  }, " Accessing and manipulating the DOM using jQuery"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 133
+    },
+    __self: this
+  }, " Asynchronous programming in JavaScript"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 134
+    },
+    __self: this
+  }, " Basic JS algorithms"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 135
+    },
+    __self: this
+  }, " Interacting with HTTP server")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.academiacredis.ro/curs-programare-web1",
+    target: "_blank",
+    rel: "noopener norefferer",
+    style: {
+      fontSize: '144%'
+    },
+    className: "s",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 137
+    },
+    __self: this
+  }, " Course - click me"));
+}
+
+;
+
+function resSelfStudy() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 141
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "check",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 142
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 143
+    },
+    __self: this
+  }, "I started to study between 7h - 12h/day on platforms as:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://pluralsight.com",
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145
+    },
+    __self: this
+  }, " PluralSight.com"), ",", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://safaribooksonline.com",
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: this
+  }, " Safari Books Online")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 148
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 150
+    },
+    __self: this
+  }, "I started to learn modern technology stack, settled to use in the project:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    id: "not-checked",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 152
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 153
+    },
+    __self: this
+  }, " Back-end (serverless): Node.js with TypeScript, Google Firebase Functions, SendGrid (send e-mail via contact form)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 154
+    },
+    __self: this
+  }, " Front-end: TypeScript, Angular8, SASS, Internationalization (i18n) - multi-language support, Google Firebase: WebApp, Authentication, Storage "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 155
+    },
+    __self: this
+  }, " Testing: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://angular.io/guide/testing#component-test-basics",
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 155
+    },
+    __self: this
+  }, "Angular Component Testing"), ",", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.protractortest.org",
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 156
+    },
+    __self: this
+  }, "Protractor e2e Tests")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 160
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 161
+    },
+    __self: this
+  }, " After about 6 months of hard work I managed to have this: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 161
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://alexandraciausu-a6df7.firebaseapp.com/",
+    target: "_blank",
+    rel: "noopener norefferer",
+    className: "s",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 162
+    },
+    __self: this
+  }, "  - Make-up Artist Portfolio Website - click me"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 162
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/mariamarinescu/MUA_portfolio",
+    target: "_blank",
+    rel: "noopener norefferer",
+    className: "s",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 163
+    },
+    __self: this
+  }, "  - GitHub Repo - click me"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 166
+    },
+    __self: this
+  }));
+}
+
+function resWCSContest() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 170
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 171
+    },
+    __self: this
+  }, "SkillValue & Wild Code School Romania"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 172
+    },
+    __self: this
+  }, "Contest checkmarks:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "check",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 173
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 174
+    },
+    __self: this
+  }, " SkillValue Quiz"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 175
+    },
+    __self: this
+  }, " Earn all required badges for: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.codecademy.com/users/MariaMarinescu/achievements",
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 175
+    },
+    __self: this
+  }, " Code Academy"), " and ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.sololearn.com/Profile/4152053",
+    target: "_blank",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 175
+    },
+    __self: this
+  }, " SoloLearn")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176
+    },
+    __self: this
+  }, " Fully responsive final project based on requirements: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://codepen.io/rria/pen/MWgqQzx",
+    target: "_blank",
+    rel: "noopener norefferer",
+    className: "s",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176
+    },
+    __self: this
+  }, " Project Link - click me"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 178
+    },
+    __self: this
+  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.facebook.com/wildcodeschoolromania/posts/500527294080499:0",
+    target: "_blank",
+    rel: "noopener norefferer",
+    className: "s",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 178
+    },
+    __self: this
+  }, " Winner announcement - click me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 179
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 180
+    },
+    __self: this
+  }, "Prize details:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 181
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 182
+    },
+    __self: this
+  }, "School: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: WCSprefix,
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 182
+    },
+    __self: this
+  }, " Wild Code School - click me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 183
+    },
+    __self: this
+  }, "Program : ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: `${WCSprefix}/trainings/web-developer-full-time?campus=bucharest`,
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 183
+    },
+    __self: this
+  }, " JS Full-stack Developer Bootcamp - click me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 184
+    },
+    __self: this
+  }, "Duration: 752h / 5 months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 185
+    },
+    __self: this
+  }, "Starting Date: 29.07.2019"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 186
+    },
+    __self: this
+  }, "Ending Date: 21.02.2020")));
+}
+
+;
+
+function resWCS() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 191
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 192
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: `${WCSprefix}/trainings/web-developer-full-time?campus=bucharest`,
+    target: "_blank",
+    rel: "noopener norefferer",
+    className: "s",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 192
+    },
+    __self: this
+  }, " Wild Code School Romania"), " - Full-stack Javascript Developer Course"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 193
+    },
+    __self: this
+  }, "Instructor: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.linkedin.com/in/cosmin-andrei-con%C8%9Bu-05144a103/",
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 193
+    },
+    __self: this
+  }, " Cosmin Contu")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 195
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 196
+    },
+    __self: this
+  }, "Program : ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: `${WCSprefix}/trainings/web-developer-full-time?campus=bucharest`,
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 196
+    },
+    __self: this
+  }, " JS Fullstack Developer Bootcamp")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 197
+    },
+    __self: this
+  }, " Course syllabus: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: `${WCSprefix}/trainings/web-developer-full-time?campus=bucharest&fbclid=IwAR1KjYFSgZ19fB-vj1wsNuiu_FKE17ytp3_7ZuEaYj3gYsG6Ku89mmW0Eok`,
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 197
+    },
+    __self: this
+  }, " Click Me")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 199
+    },
+    __self: this
+  }, "From day one we started to work as teams, using Agile Methodologies, using ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.trello.com",
+    target: "_blank",
+    rel: "noopener norefferer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 199
+    },
+    __self: this
+  }, "Trello"), " for tasks,", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 200
+    },
+    __self: this
+  }), " scrum sprints and sprints backlog."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 202
+    },
+    __self: this
+  }, "3 team projects:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_second_stepper_SecondStepper_component__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 204
+    },
+    __self: this
+  }));
+}
+
+;
+
+function getResume() {// const storage = firebase.storage();
+  // const storageRef = storage.ref();
+  // var resumeRef = storageRef.child('/resume.pdf');
+  // resumeRef.getDownloadURL().then(function (url) {
+  //   var xhr = new XMLHttpRequest();
+  //   xhr.responseType = 'blob';
+  //   xhr.onload = function (event) {
+  //     var blob = xhr.response;
+  //   };
+  //   xhr.open('GET', url);
+  //   xhr.send();
+  //   var img = document.getElementById('myimg');
+  //   img.src = url;
+  // }).catch(function (error) {
+  //   // Handle any errors
+  // });
+}
+
+function resPendingJob() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "fullstack",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 226
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "portfoliocard",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 226
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "coverphoto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 227
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "profile_picture",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 228
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "left_col",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 229
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "name",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 230
+    },
+    __self: this
+  }, "Maria Marinescu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "location",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 231
+    },
+    __self: this
+  }, "Bucharest, RO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "contact_information",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 232
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "work",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 233
+    },
+    __self: this
+  }, "Junior JS Developer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "website",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 234
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "nostyle",
+    href: "https://my-journey-through-programming.firebaseapp.com/",
+    target: "_blank",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 234
+    },
+    __self: this
+  }, "this.website")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "mail",
+    style: {
+      fontSize: '12px'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 235
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "mailto:mariafmarinescu@outlook.com",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 235
+    },
+    __self: this
+  }, "mariafmarinescu@outlook.com")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "phone",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 236
+    },
+    __self: this
+  }, "+40722.868.038"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    class: "resume",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 242
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://firebasestorage.googleapis.com/v0/b/my-journey-through-programming.appspot.com/o/resume.pdf?alt=media",
+    target: "_blank",
+    class: "nostyle",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 242
+    },
+    __self: this
+  }, "download resume")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "right_col",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 245
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 249
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "cards-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 250
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 251
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card-inner",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 255
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card-front",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 256
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "card-front",
+    src: imgPersonal,
+    alt: "",
+    style: {
+      maxWidth: '90%',
+      maxHeight: '80%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 258
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card-back ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 265
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-title ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 266
+    },
+    __self: this
+  }, "And the following sub-skills:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "card-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 270
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 271
+    },
+    __self: this
+  }, " I am a fast learner"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 273
+    },
+    __self: this
+  }, " I am driven to continue to evolve towards reaching my full potential"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 275
+    },
+    __self: this
+  }, "I am genuinely curious"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 280
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card-inner",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 284
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card-front",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 285
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    // className="card-front"
+    src: imgSocial,
+    alt: "",
+    style: {
+      maxWidth: '70%',
+      maxHeight: '20%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 287
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card-back ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 294
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-title ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 295
+    },
+    __self: this
+  }, "And the following sub-skills:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "card-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 299
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 300
+    },
+    __self: this
+  }, " I am fully present with everyone I interact, caring about their needs and understand them "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 302
+    },
+    __self: this
+  }, " I am one of the lucky ones, because, until this moment in time, I started to gain social and self awareness and it helps me at every step I take.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 311
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card-inner",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 315
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card-front",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 316
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 317
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "card-front",
+    src: imgM,
+    alt: "",
+    style: {
+      maxWidth: '70%',
+      maxHeight: '70%',
+      margin: 'auto auto'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 320
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flip-card-back",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 327
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-title ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 328
+    },
+    __self: this
+  }, "And the following sub-skills:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "card-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 332
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 334
+    },
+    __self: this
+  }, "delivery of value oriented."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 336
+    },
+    __self: this
+  }, "passionate about disruptive tech."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 339
+    },
+    __self: this
+  }, "eager to be part of a team that builds tomorrow's technology."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 340
+    },
+    __self: this
+  }, " resistant to pressure"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 341
+    },
+    __self: this
+  }, "trying to combine artistic and technical thinking."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 342
+    },
+    __self: this
+  }, "eager to learn to code in Java."))))))); // return <div className="content">
+  //   <h4>Even though at the beginning of my journey, I can state that I am:</h4>
+  //   <ul className="check">
+  //     <li> a fast learner</li>
+  //     <li> delivery of value oriented</li>
+  //     <li> passionate about disruptive tech</li>
+  //     <li> eager to be part of a team that builds tomorrow's technology</li>
+  //     <li> driven to continue to evolve towards reaching my full potential</li>
+  //     <li> fully present with everyone I interact, caring about their needs and understand them</li>
+  //     <li> genuinely curious</li>
+  //     <li> resistant to pressure => able to code in a high stress work environment </li>
+  //     <li> one of the lucky ones, because, until this moment in time, I started to gain social and self awareness <br/>and it helps me at every step I take.</li>
+  //     <li> trying to combine artistic and technical thinking 😁</li>
+  //     <li> eager to learn to code in Java</li>
+  //   </ul>
+  //   <h4>And also that I am <strong>not</strong>:</h4>
+  //   <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> clinging on the technologies I used so far, especially on the backend side </p>
+  //   <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> looking for a dull job to work at </p>
+  //   <p> <CloseIcon style={{ width: "15px", height: "15px" }} /> doing the same things every day </p>
+  // </div>
+}
+
+function getStepContent(step) {
+  switch (step) {
+    case 0:
+      return resCredis();
+
+    case 1:
+      return resSelfStudy();
+
+    case 2:
+      return resWCSContest();
+
+    case 3:
+      return resWCS();
+
+    case 4:
+      return resPendingJob();
+
+    default:
+      return 'Unknown step';
+  }
+}
+
+function HorizontalNonLinearStepper(move) {
+  const classes = useStyles();
+  const [activeStep, setActiveStep] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(0);
+  const [completed, setCompleted] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({});
+  const [skipped, setSkipped] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(new Set());
+  const steps = getSteps();
+
+  const totalSteps = () => {
+    return steps.length;
+  };
+
+  const isStepOptional = step => {
+    return step === 1;
+  };
+
+  const skippedSteps = () => {
+    return skipped.size;
+  };
+
+  const completedSteps = () => {
+    return Object.keys(completed).length;
+  };
+
+  const allStepsCompleted = () => {
+    return completedSteps() === totalSteps();
+  };
+
+  const isLastStep = () => {
+    return activeStep === totalSteps() - 1;
+  };
+
+  const goBack = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
+  const handleNext = () => {
+    const newActiveStep = isLastStep() && !allStepsCompleted() ? steps.findIndex((step, i) => !completed.has(i)) : activeStep + 1;
+    setActiveStep(newActiveStep);
+    goBack();
+  };
+
+  const handleBack = () => {
+    setActiveStep(prevActiveStep => prevActiveStep - 1);
+    goBack();
+  };
+
+  const handleStep = step => () => {
+    setActiveStep(step);
+  };
+
+  const isStepSkipped = step => {
+    return skipped.has(step);
+  };
+
+  function isStepComplete(step) {}
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_11__["Grid"], {
+    item: true,
+    xs: 11,
+    sm: 11,
+    md: 10,
+    lg: 10,
+    xl: 10,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 519
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.root,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 522
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_click_png__WEBPACK_IMPORTED_MODULE_14__,
+    className: classes.clickMobile,
+    id: "clickmobile",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 523
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_rsz_mouse_png__WEBPACK_IMPORTED_MODULE_15__,
+    className: classes.clickDesktop,
+    id: "clickdesktop",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 524
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Stepper__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    alternativeLabel: true,
+    activeStep: activeStep,
+    id: "stepper",
+    style: {
+      flexGrow: 0
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 525
+    },
+    __self: this
+  }, steps.map((label, index) => {
+    const stepProps = {};
+    const buttonProps = {};
+
+    if (isStepOptional(index)) {}
+
+    if (isStepSkipped(index)) {
+      stepProps.completed = false;
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Step__WEBPACK_IMPORTED_MODULE_3__["default"], Object.assign({
+      key: label
+    }, stepProps, {
+      classes: {
+        root: classes.step,
+        completed: classes.completed,
+        active: classes.active
+      },
+      onClick: handleStep(index),
+      completed: isStepComplete(index),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 536
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_StepLabel__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 543
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_StepButton__WEBPACK_IMPORTED_MODULE_4__["default"], Object.assign({
+      id: "bttn-sttp"
+    }, buttonProps, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 544
+      },
+      __self: this
+    }), label)));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 554
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 555
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    className: classes.instructions,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 556
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 557
+    },
+    __self: this
+  }, getStepContent(activeStep)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.buttons,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 558
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    disabled: activeStep === 0,
+    onClick: handleBack,
+    className: classes.button,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 559
+    },
+    __self: this
+  }, "Back"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    disabled: activeStep === 4,
+    variant: "contained",
+    color: "primary",
+    onClick: handleNext,
+    className: classes.button,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 562
+    },
+    __self: this
+  }, "Next"))))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["withRouter"])(HorizontalNonLinearStepper));
+
+/***/ })
+
+})
+//# sourceMappingURL=main.6296687649d09ff45779.hot-update.js.map

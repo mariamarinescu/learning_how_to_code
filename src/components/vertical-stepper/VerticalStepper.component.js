@@ -14,8 +14,8 @@ import VerticalLinearStepper from '../second-stepper/SecondStepper.component'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '100%',
-      flexGrow: '0!important'
+    width: '90%',
+    flexGrow: '0!important'
   
   },
   button: {
