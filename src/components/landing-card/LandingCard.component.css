@@ -1,11 +1,11 @@
 body {
   background: #333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  /* display: -webkit-box;
+  display: -ms-flexbox; */
+  /* display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          justify-content: center; */
 }
 
 #type3,
@@ -14,12 +14,6 @@ body {
   width: 30%;
   margin: 0 auto;
   color: grey !important;
-}
-
-#card {
-  -webkit-box-shadow: 0 px 14px #bfbfbf, 0 15px 12px #2e3131;
-          box-shadow: 0 px 14px #bfbfbf, 0 15px 12px #2e3131;
-  border-radius: 5px;
 }
 
 .effect1 {
@@ -96,74 +90,71 @@ body {
 .effect1:hover .bg:after {
   top: 6px;
 }
+/* #card {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+div#card {
+  position: relative;
+  top: 30%;
+  -webkit-box-shadow: 0 px 14px black, 0 15px 12px #2e3131;
+  box-shadow: 0 px 14px black, 0 15px 12px #2e3131;
+  border-radius: 5px;
+  background-color: white;
+  width: 360px;
+  margin: 0 auto!important;
+  max-height: fit-content!important;
+}
+.btn {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  font-size: 3vh;
+}
 
-#typewriter h1 {
+div#typewriter,
+div#typewriter2,
+div#typewriter3,
+div#typewriter4,
+div#typewriter5, 
+ div#typewriter6,
+ div#typewriter7{
+  position: relative;
+  padding-left: 24px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  width: 350px;
+  max-height: 50px!important;
+  position: relative;
+  overflow: hidden;
+
+}
+div#typewriter {
+  padding-top: 5px!important;
+
+}
+#typewriter h1, 
+#typewriter6 h1,
+#typewriter7 h1,
+#typewriter2 h1,
+#typewriter3 h1,
+#typewriter4 h1,
+#typewriter5 h1 {
+  font-size: 3vh;
+  max-height: 30px!important;
   position: relative;
   color: black;
   font-family: monospace;
   overflow: hidden;
-  border-right: 0.15em solid #009c9e;
-  white-space: nowrap;
-  width: 100%;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
-  -webkit-animation: typing 3.6s steps(30, end), link-caret 0.5s step-end infinite;
-          animation: typing 3.6s steps(30, end), link-caret 0.5s step-end infinite;
+  border-right: 0.15em solid orange;
+  -webkit-animation: typing 3.6s steps(30, end),
+    link-caret 0.5s step-end infinite;
+  animation: typing 3.6s steps(30, end), link-caret 0.5s step-end infinite;
 }
 
-#typewriter2 h1 {
-  color: black;
-  font-family: monospace;
-  overflow: hidden;
-  border-right: 0.15em solid #009c9e;
-  white-space: nowrap;
-  width: 100%;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
-  -webkit-animation: typing 4.5s steps(30, end), link-caret 0.5s step-end infinite;
-          animation: typing 4.5s steps(30, end), link-caret 0.5s step-end infinite;
-}
 
-#typewriter3 h1 {
-  color: black;
-  font-family: monospace;
-  overflow: hidden;
-  border-right: 0.15em solid #009c9e;
-  white-space: nowrap;
-  width: 100%;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
-  -webkit-animation: typing 5.5s steps(30, end), link-caret 0.5s step-end infinite;
-          animation: typing 5.5s steps(30, end), link-caret 0.5s step-end infinite;
-}
-
-#typewriter4 h1 {
-  color: black;
-  font-family: monospace;
-  overflow: hidden;
-  border-right: 0.15em solid #009c9e;
-  white-space: nowrap;
-  width: 100%;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
-  -webkit-animation: typing 6.5s steps(30, end), link-caret 0.5s step-end infinite;
-          animation: typing 6.5s steps(30, end), link-caret 0.5s step-end infinite;
-}
-
-#typewriter5 h1 {
-  color: black;
-  font-family: monospace;
-  overflow: hidden;
-  border-right: 0.15em solid #009c9e;
-  white-space: nowrap;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-  letter-spacing: 0.15em;
-  -webkit-animation: typing 7.5s steps(30, end), link-caret 0.5s step-end infinite;
-          animation: typing 7.5s steps(30, end), link-caret 0.5s step-end infinite;
-}
 
 @-webkit-keyframes typing {
   from {
@@ -202,11 +193,33 @@ body {
     border-color: orange;
   }
 }
+@media (max-width: 420px) {
+ div#card {
+   width: auto!important;
+   left: -7px;
+ }
+ div#typewriter,
+div#typewriter2,
+div#typewriter3,
+div#typewriter4,
+div#typewriter5, 
+ div#typewriter6,
+ div#typewriter7 {
+   width: auto!important;
+   padding-right: 10px;
+ }
+ div#typewriter h1, 
+div#typewriter6 h1,
+div#typewriter7 h1,
+div#typewriter2 h1,
+div#typewriter3 h1,
+div#typewriter4 h1,
+div#typewriter5 h1 {
+  font-size: 2.2vh!important;
+  height: auto!important;
+  max-height: fit-content!important;
 
-@media (max-width: 600px) {
-  #card {
-    top: 300px;
-  }
+}
   .effect1 {
     font-size: 6px !important;
     width: 80%;
@@ -220,105 +233,47 @@ body {
     padding: 0;
     left: -90px;
   }
-  #typewriter h1 {
-    font-size: 5vw !important;
-    padding-bottom: 10px;
+
+}
+@media (max-width: 600px) {
+
+  .effect1 {
+    font-size: 6px !important;
+    width: 80%;
   }
-  #typewriter2 h1 {
-    font-size: 4vw !important;
+  .effect1:hover {
+    color: grey !important;
   }
-  #typewriter3 h1 {
-    font-size: 5vw !important;
+  span.bg {
+    width: 80% !important;
+    margin: 0 auto;
+    padding: 0;
+    left: -90px;
   }
-  #typewriter4 h1 {
-    font-size: 3.8vw !important;
-    padding-bottom: 10px;
-  }
-  #typewriter5 h1 {
-    font-size: 2.9vw !important;
-  }
+
 }
 
 @media (max-width: 960px) {
-  #card {
-    display: block;
-    margin: 0 auto;
-    top: 222px;
-  }
+
   .effect1 {
     font-size: 6px;
   }
-  #typewriter h1 {
-    font-size: 3vw;
-    padding-bottom: 10px;
-  }
-  #typewriter2 h1 {
-    font-size: 4vw !important;
-  }
-  #typewriter3 h1 {
-    font-size: 5vw !important;
-  }
-  #typewriter4 h1 {
-    font-size: 3.8vw !important;
-    padding-bottom: 10px;
-  }
-  #typewriter5 h1 {
-    font-size: 2.9vw !important;
-  }
+
 }
 
 @media (max-width: 1280px) {
-  #card {
-    display: block;
-    margin: 0 auto;
-    top: 222px;
-  }
-  .effect1 {
-    font-size: 16px;
-  }
-  #typewriter h1 {
-    font-size: 3.3vw;
-    padding-bottom: 10px;
-  }
-  #typewriter2 h1 {
-    font-size: 2.7vw;
-  }
-  #typewriter3 h1 {
-    font-size: 3.3vw;
-  }
-  #typewriter4 h1 {
-    font-size: 2.7vw;
-    padding-bottom: 10px;
-  }
-  #typewriter5 h1 {
-    font-size: 2vw;
-  }
-}
 
-@media (min-width: 1920px) {
-  #card {
-    display: block;
-    margin: 0 auto;
-  }
   .effect1 {
     font-size: 6px;
   }
-  #typewriter h1 {
-    font-size: 2.7vw !important;
-    padding-bottom: 10px;
+
+}
+
+@media (min-width: 1920px) {
+
+  .effect1 {
+    font-size: 6px;
   }
-  #typewriter2 h1 {
-    font-size:2vw !important;
-  }
-  #typewriter3 h1 {
-    font-size: 2.8vw !important;
-  }
-  #typewriter4 h1 {
-    font-size: 2.6vw !important;
-    padding-bottom: 10px;
-  }
-  #typewriter5 h1 {
-    font-size: 2.0vw !important;
-  }
+
 }
 /*# sourceMappingURL=LandingCard.component.css.map */

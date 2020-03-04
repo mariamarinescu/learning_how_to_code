@@ -13,8 +13,12 @@
 main {
   flex-grow: 0!important;
 }
-
-
+.MuiButtonBase-root   {
+outline: none!important
+}
+span, button {
+  outline: none;
+}
 /*effect-box*/
 a.s:after,
 a.s:before {

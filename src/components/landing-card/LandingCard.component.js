@@ -9,27 +9,28 @@ import {Link} from 'react-router-dom';
 import './LandingCard.component.css';
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        [theme.breakpoints.down('sm')]: {
-            top: -22,
-            width:'60%',
-            height: 'auto',
-        },
-        [theme.breakpoints.up('md')]: {
-            top: 22,
-            width: '50%',
-            height: 'auto',
-        },
-        [theme.breakpoints.up('lg')]: {
-            top: 22,
-            width: '44%',
-            height: 'auto',
-        },
-        position: 'relative',
-        display: 'block',
-        margin: '0 auto',
-        zIndex: 10
-    },
+    // root: {
+    //     [theme.breakpoints.down('sm')]: {
+    //         top: -22,
+    //         width:'60%',
+    //         height: 'auto',
+    //     },
+    //     [theme.breakpoints.up('md')]: {
+    //         top: 22,
+    //         width: '50%',
+    //         height: 'auto',
+    //     },
+    //     [theme.breakpoints.up('lg')]: {
+    //         top: 22,
+    //         width: '44%',
+    //         height: 'auto',
+    //     },
+    //     position: 'relative',
+    //     display: 'block',
+    //     margin: '0 auto',
+    //     zIndex: 10, 
+    //     backgroundColor: 'white'
+    // },
     bullet: {
         display: 'inline-block',
         margin: '0 2px',
@@ -48,27 +49,48 @@ export default function OutlinedCard() {
     const bull = <span className={classes.bullet}>•</span>;
 
     return (
-        <Card className={classes.root} variant="outlined" id="card">
-            <CardContent>
-                <div id="typewriter">
-                    <h1>Hi! I'm Maria.</h1>
-                </div>
-                <div id="typewriter2">
-                    <h1>This is my journey</h1>
-                </div>
-                <div id="typewriter3">
-                    <h1>in programming</h1>
-                </div>
-                <div id="typewriter4">
-                    <h1>and a bit of myself.</h1>
-                </div>
-                <div id="typewriter5">
-                    <h1>I'll guide you through it.</h1>
-                </div>
-            </CardContent>
-            <CardActions>
-                <Button size="small" id="type3" ><Link className="effect1"to="/about">Begin<span className="bg"></span></Link></Button>
-            </CardActions>
-        </Card>
+        <div id="card">
+             <div id="typewriter">
+                     <h1>Hi! I'm Maria.</h1>
+                 </div>
+                 <div id="typewriter2">
+                     <h1>This is my journey</h1>
+                 </div>
+                 <div id="typewriter7">
+                     <h1>to becoming a</h1>
+                 </div>
+                 <div id="typewriter6">
+                     <h1>web developer</h1>
+                 </div>
+                 <div id="typewriter4">
+                     <h1>and a bit of myself.</h1>
+                 </div>
+                 <div id="typewriter5">
+                     <h1>I'll guide you.</h1>
+                 </div>
+                 <button className="btn third"><Link to="/about">Begin</Link></button>
+        </div>
+        // <Card className={classes.root} variant="outlined" id="card">
+        //     <CardContent>
+        //         <div id="typewriter">
+        //             <h1>Hi! I'm Maria.</h1>
+        //         </div>
+        //         <div id="typewriter2">
+        //             <h1>This is my journey</h1>
+        //         </div>
+        //         <div id="typewriter3">
+        //             <h1>in programming</h1>
+        //         </div>
+        //         <div id="typewriter4">
+        //             <h1>and a bit of myself.</h1>
+        //         </div>
+        //         <div id="typewriter5">
+        //             <h1>I'll guide you through it.</h1>
+        //         </div>
+        //     </CardContent>
+        //     <CardActions>
+        //         <Button size="small" id="type3" ><Link className="effect1"to="/about">Begin<span className="bg"></span></Link></Button>
+        //     </CardActions>
+        // </Card>
     );
 }
