@@ -13,11 +13,13 @@ function resPendingJob() {
     <div className="flip-card">
         <div className="flip-card-inner">
           <div className="flip-card-front">
+          <h5 className="card-title">Personal Skills</h5>
+
             <img
               className="card-front"
               src={imgPersonal}
               alt=""
-              // style={{maxWidth:'90%',maxHeight:'80%'}}
+              style={{maxWidth:'50%',maxHeight:'40%'}}
             />
           </div>
           <div className="flip-card-back ">
@@ -39,11 +41,12 @@ function resPendingJob() {
       <div className="flip-card2">
         <div className="flip-card-inner">
           <div className="flip-card-front">
+          <h5 className="card-title">Social Skills</h5>
+
             <img
               src={imgSocial}
               alt=""
-              // style={{maxWidth:'70%',maxHeight:'20%'}}
-            />
+              style={{maxWidth:'50%',maxHeight:'40%'}}            />
           </div>
           <div className="flip-card-back ">
           <h5 className="card-title card-title3"> With the following sub-skills:</h5>
@@ -60,13 +63,13 @@ function resPendingJob() {
       <div className="flip-card3">
         <div className="flip-card-inner">
           <div className="flip-card-front">
-            <h5 className="card-title"></h5>
+            <h5 className="card-title">Methodical Skills</h5>
             <img
               className="card-front"
               src={imgM}
               alt=""
-              // style={{maxWidth:'70%',maxHeight:'70%', margin: 'auto auto'}}
-            />
+              style={{maxWidth:'50%',maxHeight:'40%', position: 'relative', top: '70px'}}            />
+
           </div>
           <div className="flip-card-back">
             <h5 className="card-title">With the following sub-skills:</h5>
