@@ -74,12 +74,15 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     marginRight: theme.spacing(3),
-    margin: 6
+    margin: 44
   },
   completed: {
   },
   instructions: {
-    fontSize: 4
+    fontSize: 4, 
+    marginTop: '33px',
+    position: "relative",
+    margin: '33px'
     // margin: '0 auto'
   },
 }));

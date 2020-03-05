@@ -200,14 +200,11 @@ body {
   font-family: "Josefin Sans", sans-serif !important;
 }
         
-.card-title2, .card-text2 {
-  font-size: 0.6vh!important;
+.card-title, .card-text {
   width: 90%;
+
 }  
-.card-title3, .card-text3 {
-  font-size: 3vh;
-  width: 90%;
-}
+
 #stepper {
   position: relative !important;
 }
@@ -216,10 +213,52 @@ body {
   position: relative;
   left: -20px;
 }
+.card-title{
+  text-align: center;
+  margin: 0 auto;
+}
 .card-title {
   padding-top: 22px;
-  text-align: center;
+  font-size: 27px;
 }
+.title2{
+  font-size: 20px;
+  padding-top: 22px;
+  padding-left: 33px;
+  padding-bottom: 0;
+}
+.text2{
+  font-size: 16px;
+  padding-top: 14px;
+  
+}
+
+.text1 {
+  font-size: 18px;
+}
+.text3 {
+  font-size: 19px;
+  padding-top: 55px;
+}
+.text4 {
+  font-size: 19.5px;
+  padding-top: 33px;
+}
+.title1, .title4 {
+  padding-bottom: 11px;
+}
+.title1, .title4, .title3 {
+  font-size: 18px;
+}
+
+.not {
+  text-overflow: ellipsis;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  width: 90%;
+  margin: 0 auto
+}
+
 @media (max-width: 250px) {
   img#clickmobile {
     left: 3%;
@@ -334,6 +373,7 @@ body {
 }
 
 @media  (min-width: 992px) {
+ 
   div.content {
     padding: 66px !important;
   }
@@ -346,7 +386,11 @@ body {
 }
 
 @media  (min-width: 1200px) {
-
+  div.content1 {
+    padding: 0px !important;
+    margin: 30px 80px 10px!important;
+    width: 100%;
+  }
 }
 .card-title {
 
@@ -404,7 +448,6 @@ body {
   transform: rotateY(180deg);
   text-align: center;
   z-index: 1;
-  font-size: 1.8vh!important;
 }
 div.content {
   position: relative;

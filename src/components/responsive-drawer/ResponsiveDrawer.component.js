@@ -37,7 +37,6 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     margin: 0,
     padding: 0, 
-
     width: '90%'
   },
   appBar: {
@@ -113,7 +112,10 @@ const useStyles = makeStyles(theme => ({
     display: 'inline-block',
   },
   icon: {
-    color: '#A8A8A8'
+    color: '#A8A8A8',
+    margin: 0,
+    display: 'block', 
+    content: ''
   }
 
 }));
@@ -187,12 +189,12 @@ const ResponsiveDrawer = (props) => {
         <Divider />
 
         <List>
-          <ListItem>
+          {/* <ListItem>
             <ListItemIcon> <div className={classes.icon}><TitleIcon id="icon" /></div> </ListItemIcon>
             <ListItemText primary={"Quick links"} />
-          </ListItem>
+          </ListItem> */}
 
-          <Divider />
+          {/* <Divider /> */}
 
           <ListItem button>
             <ListItemIcon><div className={classes.icon}> <LanguageIcon id="icon"/></div> </ListItemIcon>

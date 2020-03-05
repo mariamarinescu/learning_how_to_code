@@ -64,7 +64,7 @@ a.s:hover:before {
 
 a {
   /* color: #207068; */
-  color: #A8A8A8;
+  color: 	#A8A8A8;
 }
 a:hover {
   color: #2c9c91;
@@ -74,7 +74,20 @@ a:hover {
 .rria {
  color: #2c9c91;
 }
-
+ul {
+  list-style: none;
+}
+ul li::before {
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+  content: "\2022";
+  color: #2c9c91;
+}
+#icon {
+  list-style: initial;
+}
 .rria:hover {
   color:white;
 }
