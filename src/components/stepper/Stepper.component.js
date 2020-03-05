@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useLayoutEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -14,6 +14,8 @@ import {resWCS} from './resWCS';
 import {resCredis} from './resCredis';
 import {resSelfStudy} from './resSelfStudy';
 import {resWCSContest} from './resWCSContest';
+import Example from '../snackbar/Snackbar.component';
+
 
 
 // import firebase from 'firebase';
@@ -116,9 +118,16 @@ function HorizontalNonLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
   const [skipped, setSkipped] = React.useState(new Set());
+  const [show, setShow] = React.useState(false);
+  const [count, setCount] = React.useState(0);
   const steps = getSteps();
 
-
+  useLayoutEffect(() => {
+    setCount(count + 1);
+      if(count >= 2) {
+        setShow(false)
+      } else setShow(true)
+  }, [])
   const totalSteps = () => {
     return steps.length;
   };
@@ -178,6 +187,8 @@ function HorizontalNonLinearStepper() {
     <Grid item
       xs={12} sm={12} md={12} lg={12} xl={12}
     >
+                  <Example show={show}/>
+
       <div className={classes.root}>
        
         <Stepper alternativeLabel activeStep={activeStep} id="stepper" style={{ flexGrow: 0 }}>

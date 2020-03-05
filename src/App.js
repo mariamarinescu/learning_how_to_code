@@ -4,6 +4,8 @@ import LandingPage from './components/landing/LandingPage.component';
 import Particles from 'react-particles-js';
 import { Switch, Route, HashRouter } from 'react-router-dom';
 import ResponsiveDrawer from './components/responsive-drawer/ResponsiveDrawer.component';
+import Example from './components/snackbar/Snackbar.component';
+
 
 function App() {
   return (
@@ -14,7 +16,6 @@ function App() {
         </Switch>
         <Switch>
         <Route exact path="/about" component={ResponsiveDrawer}/> 
-
         </Switch>
         </HashRouter>
     </div>

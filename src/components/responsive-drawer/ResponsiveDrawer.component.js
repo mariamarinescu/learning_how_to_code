@@ -187,15 +187,7 @@ const ResponsiveDrawer = (props) => {
         </div>
 
         <Divider />
-
         <List>
-          {/* <ListItem>
-            <ListItemIcon> <div className={classes.icon}><TitleIcon id="icon" /></div> </ListItemIcon>
-            <ListItemText primary={"Quick links"} />
-          </ListItem> */}
-
-          {/* <Divider /> */}
-
           <ListItem button>
             <ListItemIcon><div className={classes.icon}> <LanguageIcon id="icon"/></div> </ListItemIcon>
             <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer"> <ListItemText primary={"Make-up Artist Portfolio"} /></a>
@@ -253,6 +245,7 @@ const ResponsiveDrawer = (props) => {
         <div className={classes.toolbar} />
       </main>
       <HorizontalNonLinearStepper />
+
     </div>
   );
 
