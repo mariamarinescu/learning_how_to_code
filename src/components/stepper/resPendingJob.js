@@ -32,7 +32,7 @@ function resPendingJob() {
 
             <h5 className="title2 ">I have flaws like:</h5>
             <ul className="text2 card-text">
-              <li> I am <strong>not</strong> a very <strong>patient</strong> person, <strong>for the moment</strong>. But it helps me having a lot of lessons.</li>
+              <li> I am <strong>not</strong> a very <strong>patient</strong> person, <strong>for the moment</strong>, but it's useful having a lot of lessons.</li>
               <li> I can get scared easily. And I like to be scared 😅 </li>
             </ul>
           </div>
