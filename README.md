@@ -1,4 +1,4 @@
-## Personal junior developer portfolio 
+## Personal junior full stack developer portfolio 
 #### My journey through programming
 ### Built to get hired :-D 
 
