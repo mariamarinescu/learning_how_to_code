@@ -27,7 +27,9 @@ import React from 'react';
         <hr />
         <li> After about 6 months of hard work I managed to have this: <br />
           <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer" className="s">  - Make-up Artist Portfolio Website - click me</a> <br />
+          <a href="https://www.dropbox.com/s/uyfsj63chtza71t/Document.docx?dl=0"  target="_blank" rel="noopener norefferer" style={{fontSize: '23px'}} className="s"> - Click here for credentials -  </a><br/>
           <a href="https://github.com/mariamarinescu/MUA_portfolio" target="_blank" rel="noopener norefferer" className="s">  - GitHub Repo - click me</a>
+
           
         </li>
       </ul>

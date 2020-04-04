@@ -47,7 +47,9 @@ function setContent(props) {
     } else if (props === 2) {
         return <div>
             <a href="https://wildcodeschool.github.io/bucharest-project3-interactive-platform/" target="_blank" rel="noopener noreferrer" className='s'> View Website</a><br/>
+            <a href="https://www.dropbox.com/s/uyfsj63chtza71t/Document.docx?dl=0"  target="_blank" rel="noopener norefferer" className='s'> Click here for credentials (admin&user)</a><br/>
             <a href="https://github.com/WildCodeSchool/bucharest-project3-interactive-platform/tree/develop" target="_blank" rel="noopener noreferrer" className='s'> View GitHub</a>
+
             <ul>
                 <li>Datastore: MySql</li>
                 <li>Back-end: Node.js, Express, Sequalize, JWT, Passport.js, Redux</li>
