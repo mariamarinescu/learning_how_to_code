@@ -28,9 +28,11 @@ import React from 'react';
         <li> After about 6 months of hard work I managed to have this: <br />
           <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer" className="s">  - Make-up Artist Portfolio Website - click me</a> <br />
           <a href="https://github.com/mariamarinescu/MUA_portfolio" target="_blank" rel="noopener norefferer" className="s">  - GitHub Repo - click me</a>
+          
         </li>
       </ul>
       <p></p>
+     
     </div>
   }
 

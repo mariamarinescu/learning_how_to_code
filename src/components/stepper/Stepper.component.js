@@ -221,6 +221,7 @@ function HorizontalNonLinearStepper() {
           })}
         </Stepper>
     
+              
          
             <Typography className={classes.instructions}></Typography>
             <div>{getStepContent(activeStep)}</div>
@@ -238,6 +239,8 @@ function HorizontalNonLinearStepper() {
               >
                 Next
               </Button>
+              <a href="https://www.dropbox.com/s/uyfsj63chtza71t/Document.docx?dl=0"  target="_blank" rel="noopener norefferer" style={{fontSize: '23px'}}>- Click here for credentials - Make-up Artist Portfolio & Techir Interactive Platform - </a>
+
             </div>
           </div>
 

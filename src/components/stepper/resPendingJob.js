@@ -44,6 +44,7 @@ function resPendingJob() {
             <h5 className="card-title">Social Skills</h5>
 
             <img
+           className="card-front"
               src={imgSocial}
               alt=""
               style={{ maxWidth: '50%', maxHeight: '40%' }} />

@@ -82,7 +82,8 @@ const useStyles = makeStyles(theme => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
     backgroundColor: "rgb(51,51,51)",
-    color: '#A8A8A8!important'
+    color: '#A8A8A8!important',
+    zIndex: 1000
   },
   drawerClose: {
     transition: theme.transitions.create('width', {
@@ -188,9 +189,9 @@ const ResponsiveDrawer = (props) => {
 
         <Divider />
         <List>
-          <ListItem button>
+          <ListItem button style={{zIndex: 10000}}>
             <ListItemIcon><div className={classes.icon}> <LanguageIcon id="icon"/></div> </ListItemIcon>
-            <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer"> <ListItemText primary={"Make-up Artist Portfolio"} /></a>
+            <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer"  > <ListItemText primary={"Make-up Artist Portfolio"} /></a>
           </ListItem>
 
           <Divider />
