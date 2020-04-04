@@ -40,7 +40,6 @@ function setContent(props) {
         return <div>
             <a href="http://rriamarria.github.io/real_time_iss_tracker" target="_blank" rel="noopener noreferrer" className='s'> View Website</a><br/>
             <a href="https://github.com/rriamarria/real_time_iss_tracker" target="_blank" rel="noopener noreferrer" className='s'> View GitHub</a>
-            resPendingJob
             <ul>
           <li>Front-end: React, Axios, React-Bootstrap</li>
           </ul>

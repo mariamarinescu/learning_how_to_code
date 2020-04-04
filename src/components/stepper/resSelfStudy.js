@@ -19,8 +19,8 @@ import React from 'react';
                 <ul id="not-checked">
             <li> Back-end (serverless): Node.js with TypeScript, Google Firebase Functions, SendGrid (send e-mail via contact form)</li>
             <li> Front-end: TypeScript, Angular8, SASS, Internationalization (i18n) - multi-language support, Google Firebase: WebApp, Authentication, Storage </li>
-            <li> Testing: <a href="https://angular.io/guide/testing#component-test-basics" target="_blank" rel="noopener norefferer">Angular Component Testing</a>,
-            <a href="https://www.protractortest.org" target="_blank" rel="noopener norefferer">Protractor e2e Tests</a></li>
+            <li> Testing: Angular Component Testing,
+            >Protractor e2e Tests</li>
   
           </ul>
         </li>
