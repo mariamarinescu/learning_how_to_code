@@ -52,7 +52,7 @@ function setContent(props) {
 
             <ul>
                 <li>Datastore: MySql</li>
-                <li>Back-end: Node.js, Express, Sequalize, JWT, Passport.js, Redux</li>
+                <li>Back-end: Node.js, Express, Sequalize, JWT, Passport.js, Redux, Bcrypt, File-system, Nodemailer</li>
                 <li>Front-end: React, Axios, React-Bootstrap</li>
                 <li>Backend hosted on Heroku</li>
                 <li>Frontend hosted on GitHub Pages</li>

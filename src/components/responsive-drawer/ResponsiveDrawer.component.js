@@ -191,7 +191,7 @@ const ResponsiveDrawer = (props) => {
         <List>
           <ListItem button style={{zIndex: 10000}}>
             <ListItemIcon><div className={classes.icon}> <LanguageIcon id="icon"/></div> </ListItemIcon>
-            <a href="https://alexandraciausu-a6df7.firebaseapp.com/" target="_blank" rel="noopener norefferer"  > <ListItemText primary={"Make-up Artist Portfolio"} /></a>
+            <a href="https://alexandraciausu-a6df7.web.app/" target="_blank" rel="noopener norefferer"  > <ListItemText primary={"Make-up Artist Portfolio"} /></a>
           </ListItem>
 
           <Divider />

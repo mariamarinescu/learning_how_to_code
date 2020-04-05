@@ -27,7 +27,7 @@ function resPendingJob() {
             <ul className="card-text text1">
               <li> I am a <strong>fast learner</strong></li>
               <li> I am <strong>driven</strong> to continue to evolve <strong>towards reaching my full potential</strong></li>
-              <li>I am genuinely <strong>curious</strong></li>
+              <li> I am genuinely <strong>curious</strong></li>
             </ul>
 
             <h5 className="title2 ">I have flaws like:</h5>
